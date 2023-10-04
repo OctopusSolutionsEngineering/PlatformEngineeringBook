@@ -1,0 +1,50 @@
+---
+---
+<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+ 
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>DevEx as a Service with Platform Engineering</dc:title>
+    <dc:language>en</dc:language>
+    <dc:identifier id="BookId" opf:scheme="ISBN">123456789X</dc:identifier>
+    <dc:creator opf:file-as="Casperson, Matthew" opf:role="aut">Matthew Casperson</dc:creator>
+    <dc:publisher>Amazon.com</dc:publisher>
+    <dc:subject>Reference</dc:subject>
+    <dc:date>2023-10-01</dc:date>
+    <dc:description>An introduction to DevEx as a Service and how it is implemented using Platform Engineering</dc:description>
+    {{ site.coverImage }}  
+  </metadata>
+ 
+  <manifest>
+    <item id="copyright" href="copyright.html" media-type="application/xhtml+xml"/>
+    <item id="tc" href="toc.html" media-type="application/xhtml+xml"/>
+    <item id="book" href="book.html" media-type="application/xhtml+xml"/>
+    <item id="stylesheet" href="style.css" media-type="text/css"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="cover_image" href="{{ site.platform }}cover.png" media-type="image/png"/>
+    {% for image in site.static_files %}
+        {% if image.path contains 'images' %}
+            <item id="image{{ forloop.index }}" href="{{ image.path | replace_first: "/", "" }}" media-type="image/png"/>
+        {% endif %}
+    {% endfor %}
+  </manifest>
+ 
+  <!--
+    Each itemref references the id of a document designated in the manifest.
+    The order of the itemref elements organizes the associated content files into the linear reading order of the publication.
+  -->
+  <spine toc="ncx">
+    <itemref idref="copyright" />
+    <itemref idref="tc" />
+    <itemref idref="book" />
+  </spine>
+ 
+  <!-- The Kindle reading system supports two special guide items which are both mandatory.
+  type="toc" [mandatory]: a link to the HTML table of contents
+  type="text" [mandatory]: a link to where the content of the book starts (typically after the front matter) -->
+  <guide>
+    <reference type="toc" title="Table of Contents" href="toc.html"/>
+    <reference type="text" title="Beginning" href="toc.html"></reference>
+  </guide>
+ 
+</package>

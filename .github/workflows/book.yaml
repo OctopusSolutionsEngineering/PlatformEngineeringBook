@@ -1,0 +1,105 @@
+name: Build epub
+
+permissions:
+  id-token: write
+  checks: write
+  contents: write
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - uses: nelonoel/branch-name@v1.0.1
+
+    - name: Build book
+      env:
+        VERSION: 0.1.${{ github.run_number }}
+      run: |-
+        sudo apt-get install -y ruby-full build-essential zlib1g-dev python2 dos2unix libegl1 libopengl0
+        echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+        echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+        echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+        source ~/.bashrc
+        sudo gem install jekyll bundler jekyll-contentful-data-import
+        cd scripts
+        dos2unix create-epub.sh
+        chmod +x create-epub.sh
+        ./create-epub.sh
+
+    - name: Validate HTML
+      run: python2 ./scripts/html5check.py -h ./_site/book/book.html
+
+    - name: Install Calibre
+      run: sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo --preserve-env=CALIBRE_INSTALLER_LOCAL_URL sh /dev/stdin version=6.13.0
+      env:
+        CALIBRE_INSTALLER_LOCAL_URL: https://octopus-sales-engineering.s3.ap-southeast-2.amazonaws.com/calibre-6.13.0-x86_64.txz
+    
+    - name: Convert to PDF
+      run: |
+        ebook-convert \
+        _site/book/MyBook.epub \
+        _site/book/MyBook.pdf \
+        --pdf-sans-family 'Helvetica' \
+        --pdf-serif-family 'Helvetica' \
+        --pdf-default-font-size 12 \
+        --pdf-mono-font-size 12 \
+        --cover 'pdf-cover.png'
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: 0.1.${{ github.run_number }}-${{ env.BRANCH_NAME }}
+        release_name: Release 0.1.${{ github.run_number }}-${{ env.BRANCH_NAME }}
+        draft: github.ref != 'refs/heads/main'
+        prerelease: github.ref != 'refs/heads/main'
+
+    - name: Upload EPUB Release Asset
+      id: upload-release-asset-epub
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: _site/book/MyBook.epub
+        asset_name: deaas.epub
+        asset_content_type: application/zip
+
+    - name: Upload PDF Release Asset
+      id: upload-release-asset-pdf
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: _site/book/MyBook.pdf
+        asset_name: deaas.pdf
+        asset_content_type: application/pdf
+
+    - name: Build printable EPUB
+      env:
+        VERSION: 0.1.${{ github.run_number }}
+      run: |-
+        cd scripts
+        dos2unix create-epub-kdp.sh
+        chmod +x create-epub-kdp.sh
+        ./create-epub-kdp.sh
+
+    - name: Upload Printable EPUB Release Asset
+      id: upload-release-asset-printable-epub
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: _site/kdp/MyBookKDP.epub
+        asset_name: lambda-printable.epub
+        asset_content_type: application/zip

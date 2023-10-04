@@ -1,0 +1,7 @@
+destination: _site/kdp
+exclude:
+  - "*.yml"
+# This is the only way I could find to have print images display correctly
+imageWidth: 1600px
+imageHeight: 900px
+coverImage:
