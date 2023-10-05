@@ -1,0 +1,222 @@
+<h1><a id="pevalue">The Value of Platform Engineering</a></h1>
+
+<p>Despite being a relatively new field, studies, articles, and anecdotes demonstrate this paradigm's value to
+    engineering organizations.</p>
+
+<p>This chapter is most useful for organizations considering establishing a platform team, as such a request requires a
+    compelling argument for funding. It is essential to relate the value of a product team and the IDP they create back
+    to business goals. Supporting those arguments with industry survey results and external examples of success gives
+    you credibility. It provides those who fund this team confidence that platform engineering is not a fad.</p>
+
+<h2>Platform Engineering by the Numbers</h2>
+
+<p>The HashiCorp “2023 State of Cloud Strategy Survey” report (https://oc.to/vr6S2Q) notes that:</p>
+
+<p style="margin-left: 2em">The presence of a centralized platform team is a foundational element of a well-rounded
+    multicloud strategy.</p>
+
+<p>The report then says:</p>
+
+<p style="margin-left: 2em">Platform teams are a key pillar of operational maturity. These centralized hubs effectively
+    manage people and standardize processes, but organizations need skilled professionals to staff them. Those without
+    platform teams cited a lack of skills/staff (36%) as the reason why they hadn’t put one in place to manage their
+    cloud strategy — a rise of 14 percentage points from 2022’s State Of Cloud Strategy Survey.</p>
+
+<p>The Puppet “State of DevOps Report Platform Engineering Edition 2023” (https://oc.to/7O5fqO) reports that 68% of
+    respondents saw an increase in development velocity after implementing a platform team. In addition, 93% of
+    respondents reported that development speed after the inception of a platform team increased “A great deal” or
+    “somewhat”, with only 5% reporting “very little”.</p>
+
+<p>Platform teams also improved DevEx, with the report showing that:</p>
+
+<p style="margin-left: 2em">Most notably, respondents at firms with platform engineering in place are more likely to
+    identify as “very satisfied.”</p>
+
+<p>In his presentation “Why did you build an Internal Developer Platform at GitHub?” (https://oc.to/ItKChg), Jason
+    Warner, CTO of GitHub, notes that scaling processes with people was not a viable option:</p>
+
+<p style="margin-left: 2em">When we hit that scale on operations, or the infrastructure team, [who were] responsible for
+    coordinating all those things that were happening and how to release it, it was unmanageable.</p>
+
+<p style="margin-left: 2em">You couldn’t scale that with people.</p>
+
+<p>Eugene Kim of Insider (https://oc.to/8V7w5I) reported the efforts of Amazon CEO Andy Jassy to fix a crumbling
+    engineering culture with a new unit called Amazon Software Builder Experience (ASBX). The article notes the
+    engineering team's frustrations:</p>
+
+<p style="margin-left: 2em">In a recent internal survey, seen by Insider, 34% of the engineers said they spent 4 to 8
+    hours on undifferentiated efforts weekly, or roughly 10% to 20% of their week on things that are not related to
+    building new products. Another survey found that engineers spend 30% of their time on "repetitive tasks."</p>
+
+<p>The article goes on to list the six tenants used by the ASBX team:</p>
+
+<ol>
+    <li>Software builders across Amazon require consistent, interoperable, and extensible tools to construct and operate
+        applications at our peculiar scale; organizations will extend on our solutions for their specialized business
+        needs.
+    </li>
+    <li>Amazon's customers benefit when software builders spend time on novel innovation. Undifferentiated work
+        elimination, automation, and integrated opinionated tooling reserve human interaction for high judgment
+        situations.
+    </li>
+    <li>Our tools must be available for use even in the worst of times, which happens to be when software builders may
+        most need to use them: we must be available even when others are not.
+    </li>
+    <li>Software builder experience is the summation of tools, processes, and technology owned throughout the company,
+        relentlessly improved through the use of well-understood metrics, actionable insights, and knowledge
+        sharing.
+    </li>
+    <li>Amazon's industry-leading technology and access to top experts in many fields provides opportunities for
+        builders
+        to learn and grow at a rate unparalleled in the industry.
+    </li>
+    <li>As builders we are in a unique position to codify Amazon's values into the technical foundations; we foster a
+        culture of belonging by ensuring our tools, training, and events are inclusive and accessible by design.
+    </li>
+</ol>
+
+<p>While the ASBX team doesn't specifically describe itself as a platform team, a focus on "undifferentiated work
+    elimination, automation, and integrated opinionated tooling", the relentless improvement of "software builder
+    experience", and "codifying" organizational values all speak to the principals of a platform team.</p>
+
+<p>More than the specific highlights above, the most valuable thing to take away from this chapter is the existence of
+    reports and industry examples that quantify the value of platform teams and IDPs. These examples are invaluable to
+    have in your back pocket when quantifying the value of a platform team.</p>
+
+<h2>Quantifying the Business Value</h2>
+
+<p>There are many ways to demonstrate the potential value of a business proposal. But, as we'll discover in the
+    "Planning your Internal Developer Platform" chapter, the initial members of a platform team are likely to be
+    generalists rather than seasoned salespeople, so we'll need a straightforward methodology to articulate the business
+    value of a platform team.</p>
+
+<p>The post “Identified Pain Is About Customer Outcomes” (https://oc.to/iktukN) lists four concerns, or pain points,
+    that all business initiatives must consider:</p>
+
+<ul>
+    <li>Revenue – is there a pain impacting their booking revenue? Does your solution solve this pain?</li>
+    <li>Cost – is there a pain driving up the cost of doing business? Can your solution solve this pain?</li>
+    <li>Risk – is there a new regulation they are in danger of breaching? Does your solution mitigate the pain?</li>
+    <li>Shareholder Commitments – have they committed to something to their shareholders, which without your solution
+        they will fail to deliver?
+    </li>
+</ul>
+
+<p>Any new initiative must ultimately impact one or more of these concerns, where risk and cost decrease while revenue
+    increases. It is harder to show independent increases to shareholder value, but it is included here for
+    completeness.</p>
+
+<p><i>Emma Maslen, the author of the post above, included shareholder value to capture cases where businesses were
+    working towards efforts like environmental initiatives or diversity, equity and inclusivity that may not necessarily
+    impact risk, cost, or revenue. In most cases, shareholder value is a consequence of changes to the other three pain
+    points.</i></p>
+
+<p>The chapter “Planning your Internal Developer Platform” notes that a clear mission and focus are vital to a
+    successful IDP implementation. The mission statement is also an opportunity to address one or more of these four
+    pain points.</p>
+
+<p>Fortunately, an IDP has plenty of scope to impact business value positively. By infusing best practices at scale
+    throughout your DevOps teams, it is reasonable to argue that your IDP directly reduces friction, improves DevEx,
+    improves deployment frequency, or improves compliance. Importantly, these improvements are repeatable and scalable.
+    The final step is to describe these improvements in terms of business concerns like risk, cost, or revenue.</p>
+
+<p>Unlike the mission statement, the business value captured in this process must be expressed as a number to ensure it
+    is measurable. Defining measurable values involves answering questions like:</p>
+
+<ul>
+    <li>How much money will be earned from new features delivered as a result of the increased performance of the DevOps
+        teams?
+    </li>
+    <li>How much reputational risk is reduced by standardizing security practices across all projects?</li>
+    <li>How much money will be saved by removing the need for DevOps teams to manually respond to a newly published
+        CVE?
+    </li>
+    <li>How many fewer staff members will leave DevOps teams in a year if 20% of undifferentiated work is removed?</li>
+</ul>
+
+<p>Metrics and numbers can be sensitive subjects and it is easy to impose arbitrary values on people who may not
+    appreciate the implications. Pia Nilsson, Lead Platform Developer and Experience Lead at Spotify, noted in her talk
+    "Developer Enablement at Spotify" (https://oc.to/BXqhGK) that co-creating metrics has been a successful
+    approach:</p>
+
+<p style="margin-left: 2em">I think the way I've seen it successful, and it took us a few years to get this right too,
+    is to really go to the organization within your company, approach these leaders with empathy [...], and help them
+    co-create metrics that would matter to them.</p>
+
+<h2>Spare Time Platform Teams</h2>
+
+<p>A common symptom of an organically grown platform engineering strategy is spare-time platform teams, usually
+    comprised of a few enthusiastic engineers who tackled the technical aspect of an IDP and who demonstrated enough
+    value within their immediate orbit to justify maintaining it, if only in an ad-hoc manner.</p>
+
+<p>Spare-time product teams can do fantastic work. As Eric S. Raymond teaches as the first lesson in "The Cathedral and
+    the Bazaar" :</p>
+
+<p style="margin-left: 2em">Every good work of software starts by scratching a developer’s itch.</p>
+
+<p>However, such teams are one reorganization away from being dispersed amongst their broader DevOps ecosystem, which
+    makes them fragile. Clearly articulating the business value of a platform team makes it more resilient to changing
+    business conditions.</p>
+
+<h2>Example Checklist</h2>
+
+<p>The checklist below provides a simple example describing how an IDP may positively impact core business
+    requirements.</p>
+
+<table>
+    <tr>
+        <td>
+            Business Concern
+        </td>
+        <td>
+            Impact
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Risk
+        </td>
+        <td>
+            <p>An internal review identified 15 dependencies used in production applications rated as critical. These
+                vulnerabilities expose the company to data breaches and denial of service attacks. The current process
+                of discovering vulnerabilities is reactive and ad-hoc, leaving production applications vulnerable for
+                many months.</p>
+
+            <p>An IDP that provides CI/CD pipelines including standardized security scanning steps allows DevOps teams
+                to identify which applications have vulnerable dependencies within 1 day of vulnerability reports being
+                publicly released.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Cost
+        </td>
+        <td>
+            <p>Exit surveys indicate that undifferentiated work contributed to 20% of those who quit last year. By
+                reducing undifferentiated work, the IDP aims to reduce staff turnover and the cost of training new staff
+                by $100,000 annually.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Revenue
+        </td>
+        <td>
+            <p>New features took, on average, six months to be released to customers last year, with 17 lost
+                opportunities due to missing product functionality.</p>
+
+            <p>DevOps teams have identified that time spent waiting for infrastructure provisioning contributed at least
+                four weeks to this release time.</p>
+
+            <p>By exposing self-service infrastructure provisioning, the IDP aims to reduce release times by 10%,
+                allowing up to 3 new features to be released per year, resulting in the completion of 5 additional deals
+                worth 75k per year.</p>
+        </td>
+    </tr>
+</table>
+
+<h2>Conclusion</h2>
+
+<p>Organizations looking to introduce a platform team must present a compelling business case for an IDP and the
+    platform team responsible for it. This chapter provides insights into the benefits of platform engineering based on
+    industry reports and distills business value down to three pain points to attach quantifiable value to.</p>
