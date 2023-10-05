@@ -1,0 +1,83 @@
+<h1><a id="introduction">Platform Engineering vs. DevOps</a></h1>
+
+<p>You can find many resources dedicated to DevOps, yet the concept is very frustrating for those who have had to apply
+    it meaningfully. To understand why DevOps has become so contentious, we will investigate it by exploring the
+    counterfactual "What is DevOps not?"</p>
+
+<h2>What is DevOps Not?</h2>
+
+<p>The image below depicts a common interpretation of the DevOps lifecycle:</p>
+
+<div><img alt="DevOps Lifecycle" src="images/devops-lifecycle.png"/></div>
+
+<p>This image shows that DevOps encompasses planning, writing, testing, deploying, monitoring, and supporting software.
+    The DevOps lifecycle is perhaps best summed up by a quote from Werner Vogels, Amazon's CTO, who said in 2006, "You
+    build it, you run it."</p>
+
+<p>We then have measurements that gauge the performance of DevOps teams. The DORA Accelerate State of DevOps report has
+    five key metrics: deployment frequency, lead time for changes, change failure rate, time to restore service, and
+    reliability. These are referred to as the DORA metrics. It also links organizational performance to the
+    characteristics described by Westrum's organizational culture (https://oc.to/r2TWX0), where generative cultures high
+    in trust and low in blame exhibit higher performance.</p>
+
+<p>These definitions show us that the processes and cultural foundations that support and improve the delivery of
+    features, reduce defects, and reduce the time to resolve issues all contribute to the foundation of DevOps.</p>
+
+<p>And these are just two of the more popular interpretations of DevOps. One of the great successes of the DevOps
+    movement is that it encourages new perspectives on the metrics, processes, ideals, and cultural underpinnings of the
+    field.</p>
+
+<p>But even with just the DevOps lifecycle, DORA metrics, and Westrum organizational culture, we can attempt to answer
+    the question “What is DevOps not?”</p>
+
+<p>There is no satisfying answer to that question. The term DevOps has become almost unfalsifiable, but this is quite by
+    design. DevOps has unashamedly sought to break down the silos that previously separated teams responsible for
+    creating and delivering technical solutions, while simultaneously building a culture of psychological safety to
+    empower teams to deliver creative solutions. The ideal DevOps team is self sufficient, with the ability,
+    willingness, confidence, and responsibility to tackle any problem.</p>
+
+<p>But for every ideal DevOps team thriving on the responsibility to own their own destiny, there is another team slowly
+    drowning under the constant need to resolve every brittle process they encounter in the DevOps lifecycle. The mental
+    burden of this undifferentiated and unsatisfying work has come to define their existence, leading to a downward
+    spiral of dispirited and low performing teams. Or, put more simply, teams with an unsatisfactory developer
+    experience.</p>
+
+<h2>What is Platform Engineering?</h2>
+
+<p>If DevOps encapsulates literally everything that is required to deliver a technical product to a customer, then
+    platform engineering is the catalyst to initiate and facilitate DevOps processes. By delivering DevEx as a Service
+    through an IDP, platform teams improve the velocity of DevOps teams, increase the quality and consistency of their
+    work, remove points of friction that DevOps teams find so frustrating, and do so in a repeatable and scalable
+    manner.</p>
+
+<p>By aligning itself with established paradigms like IaaS, PaaS, and SaaS, DEaaS expresses the goal of platform
+    engineering (improved DevEx) and its method of delivery (a self-service IDP).</p>
+
+<p>Describing platform engineering in terms of DEaaS also allows platform teams to identify whether their work
+    contributes to the goal of platform engineering or if it is more aligned with the kind of Business as Usual (BAU)
+    work often performed by DevOps teams. This avoids the unfalsifiability of DevOps. The difference between DEaaS and
+    other tasks is whether the work can be used to spin up a new project or team.</p>
+
+<p>Consider that every major Operating System (OS) these days has the ability to host VMs. Does that mean you have
+    implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires the ability to
+    provision a durable, accessible, supported, and monitored VM on demand, or at least with as little friction as
+    possible.</p>
+
+<p>In the same manner, if spinning up a new project or team involves recreating processes and infrastructure from memory
+    or reverse engineering settings from existing code bases and established systems, you have not implemented platform
+    engineering. This is true even if your work has been to improve DevEx by streamlining processes or refine the state
+    of established platforms, as the knowledge about what decisions were made, and why, is only held in the heads of a
+    few key members of the DevOps team.</p>
+
+<p>On the other hand, if you can leverage your IDP to spin up a new project or team, with confidence that best practices
+    and hard won business knowledge is baked into the foundation your IDP provides, then you have successfully
+    implemented platform engineering. This one-to-many relationship between an IDP and the processes used by DevOps
+    teams demonstrates that architectural decisions are centrally defined and can be implemented on demand.</p>
+
+<p><i>I have spent literally years tweaking my workstation to streamline my workflows. I now have a nice collection of
+    scripts, kernel settings, application customizations, and browser extensions to solve common problems and let me
+    focus on useful work. This is a clear example of focusing on DevEx, but it is not an example of platform
+    engineering, because a new colleague could not readily recreate my environment. In fact, I’m not even sure I could
+    readily recreate my environment either. Understanding all the decisions that went into an established system is like
+    trying to deduce the colors that were mixed to produce a tin of paint. The paint tin analogy holds even though I
+    would have been the one to originally mix the paint!</i></p>
