@@ -1,0 +1,271 @@
+<h1><a id="planning">Planning your Internal Developer Platform</a></h1>
+
+<p>It is tempting to think platform engineering has a simple, technical solution. Perhaps a YAML template for your
+    Kubernetes cluster, a script for your CI/CD pipeline, or a custom web app providing a dashboard and internal
+    registry of templates will solve the immediate requirements. But this narrow focus misses the opportunity a platform
+    team can bring to your organization.</p>
+
+<p>Platform engineering means building a Developer Experience as a Service platform. A platform team is effectively
+    running an internal startup, which means you are not providing a piece of software but a complete service to your
+    internal customers.</p>
+
+<p>Running an internal startup can be daunting because platform engineering teams must draw from the work typically done
+    by dedicated engineering, support, technical writing, training, product, and design teams. However, addressing a few
+    key activities early in the inception of a platform team provides a solid foundation for future growth while
+    retaining the agility required to keep pace with high-performing DevOps teams.</p>
+
+<h2>Building your Platform Team</h2>
+
+<p>It can seem like platform teams are saddled with the same do-it-all-yourself mentality as their DevOps customers.
+    Indeed, in the early stages, platform engineering teams will attract generalists who enjoy tackling various
+    challenges but with a clearly defined mission to avoid taking on an impossibly broad scope of work.</p>
+
+<p>Over time, platform engineering teams evolve to incorporate the kind of specialized roles found in other
+    product-focused engineering teams. The "State of DevOps Report Platform Engineering Edition 2023"
+    (https://oc.to/7O5fqO) notes that:</p>
+
+<p style="margin-left: 2em">At firms in which a platform team has existed for three or fewer years, 60% of respondents
+    identify a need for a
+    product manager; at firms in which a platform team has existed for more than three years, this number rises to
+    74%.</p>
+
+<p>You can expect a successful platform engineering strategy to incorporate other specialized roles such as technical
+    support, technical writers, security, and site reliability. That said, though, generalists will serve your initial
+    platform well by being able to draw on experience from various backgrounds.</p>
+
+<p>The Forbes article “Generalist Vs. Specialist Teams: How To Build A Highly Creative Startup” (https://oc.to/jkdl9C)
+    notes that the unpredictable nature of startups does not support specialization:</p>
+
+<p style="margin-left: 2em">In highly-predictable environments, specialization allows you to solve problems very
+    efficiently. In unpredictable
+    environments, however, efficiency isn’t as important as creativity. And the environment of innovative startups is
+    anything but predictable.</p>
+
+<p>The activities listed in this chapter support teams in the initial stages of their platform engineering journey. The
+    aim is not to make the platform team experts in product management, marketing, technical writing, and training.
+    Instead, these activities reinforce the need to treat platform engineering like a startup rather than a feature to
+    be delivered in a sprint and provide a solid foundation for operating an internal product.</p>
+
+<h2>Mission and Focus</h2>
+
+<p>The platform team’s mission and focus are crucial to ensuring that you deliver the highest value solutions to your
+    DevOps teams. Some examples of mission statements are:</p>
+
+<ul>
+    <li>Enforce conformance by provisioning standard deployment pipelines for all microservices.</li>
+    <li>Improve security and maintainability by enabling security scanning against all production deployments.</li>
+    <li>Manage costs by providing the ability to create standardized cloud resources with self-service workflows.</li>
+    <li>Standardize observability by adding monitoring capabilities to all public-facing applications.</li>
+    <li>Increase reliability by automating fault detection and rectification for all Kubernetes applications.</li>
+</ul>
+
+<p>The mission statement must capture the platform's functional requirements (what the platform will do) and
+    non-functional requirements (capabilities that the platform will support, typically "ilities" like observability,
+    scalability, and maintainability). It must also positively influence the business concerns listed in the
+    "Quantifying the Business Value" section of cost, risk, revenue, and shareholder value.</p>
+
+<p>You can find a comprehensive list of non-functional requirements on Wikipedia (https://oc.to/UD2mRM), while the
+    chapter “The Ten Pillars of Pragmatic Deployments” documents non-functional requirements tailored to CI/CD
+    pipelines.</p>
+
+<p>A simple statement that defines the team's mission will provide context for all their subsequent activities, for
+    example, by focusing your user interviews on pain points and aspirations related to the mission while triaging
+    support and feature requests based on their alignment with the mission.</p>
+
+<p>The mission statement also guards against the platform engineering team becoming a reactive, general-purpose support
+    platform for wider DevOps teams.</p>
+
+<h2>User Interviews</h2>
+
+<p>Talking to your DevOps teams and their management is critical to understanding the opportunities for a platform team
+    to improving DevEx. These conversations will quickly highlight the pain points in your company's current processes,
+    as well as surfacing many aspirational goals.</p>
+
+<p>Your IDP will be bought by your peers, not sold by their managers, so the people you interview are the same people
+    you are trying to sign up for your internal startup. You will gain your customer's trust by taking note of their
+    pain and wishes and repeating these observations as you talk about the goals and features of your IDP.</p>
+
+<p>Courtney Kissler, who led large-scale reorganizations and technology transformations at Starbucks, Nike, and Zulily,
+    notes in her presentation “How to build internal platforms for the enterprise” (https://oc.to/V0pDUd) that:</p>
+
+<p style="margin-left: 2em">Just because you build a platform doesn't mean people are going to consume it.</p>
+
+<p style="margin-left: 2em">It has to solve a need, it has to be compelling, and you need to treat it like a
+    product.</p>
+
+<p><i>For those from an engineering background, talking to customers can elicit a feeling of dread. As an engineer, I
+    never wanted to talk to customers because every customer I ever interacted with asked me to fix a bug or solve a
+    problem. This order-taking was tolerable via asynchronous communication like email, but face-to-face conversation
+    felt like an invitation for unbounded personal support, which was the last thing I wanted.</i></p>
+
+<p><i>I wasn't necessarily wrong (I've had more than a few "I hope it is OK to email you directly, but I was wondering
+    if you could ..." emails after one-on-one conversations). Fortunately, internal user interviews are far more
+    informal and enjoyable. They have proven to be a great way to build camaraderie and surfaced many wishes and
+    requirements for our IDP.</i></p>
+
+<p>Just as important as listening to your audience is the ability to challenge them with new ideas. Even if you have
+    been granted the opportunity to build an IDP, user interviews are still as much about selling the benefits of an IDP
+    as it is about gathering requirements (or, in other words, being an order-taker).</p>
+
+<p>The Forbes article “Why Most Salespeople Are Order Takers And Not Sellers” (https://oc.to/VmnpgR) notes that:</p>
+
+<p style="margin-left: 2em">Selling is about change, and it's salespeople's job to influence that change. Salespeople
+    who can't influence change are simply order-takers.</p>
+
+<p>Gregor Hohpe similarly notes in his book “The Software Architect Elevator” that modern IT departments have moved
+    beyond order taking:</p>
+
+<p style="margin-left: 2em">Positioning IT architecture on par with business architecture highlights, though, that the
+    days when IT was a simple order-taker that provides a commodity resource at the lowest possible cost are (luckily)
+    over. In the digital age, IT is a competitive differentiator and opportunity driver, not a commodity like
+    electricity.</p>
+
+<p>You are uniquely positioned as a platform team member to understand the different viewpoints held by your DevOps
+    teams, to share those insights with a broader audience, and sell a vision for how an IDP can influence positive
+    change in an organization. Remember, you are running a startup, not building a better conveyor belt.</p>
+
+<p>For those platform engineering teams tasked with improving their CI/CD pipelines, the chapter "The Ten Pillars of
+    Pragmatic Deployments'' lists typical deployment pipeline non-functional requirements. These provide valuable
+    prompts to surface desirable qualities as you talk with your customers.</p>
+
+<h2>Documentation and Training</h2>
+
+<p>Your IDP is a tool that tool builders use. It integrates many other tools and platforms. It needs to be flexible,
+    configurable, and customizable. In short, it is a bespoke product encapsulating and supporting the specific
+    requirements of your internal teams and organization.</p>
+
+<p>Your customers don't have the luxury of Googling how to use this internal tool, and there are no posts on Stack
+    Overflow to point them in the right direction. The lack of external community support means your platform requires
+    robust documentation and training for your internal customers to get the most out of it.</p>
+
+<p>The success of your IDP can be measured by its ability to embed best practices more broadly than would be possible if
+    individuals were to implement them within each team or project. This scale is only possible if DevOps teams can
+    understand and implement the solution without requiring a personal demonstration every time. Documentation and
+    training are two proven solutions for upskilling customers at a time and pace that suits them.</p>
+
+<p><i>"Any product that needs a manual to work is broken." It's a catchy quote from Elon Musk, and yet the first time I
+    caught a Tesla Model 3, my Uber driver had to open the door for me because I didn't know how the handles worked.
+    Thankfully, and ironically, Tesla's online owner's manual has excellent documentation on how to open the doors. I'll
+    know better next time.</i></p>
+
+<h2>Support</h2>
+
+<p>A considerable aspect of the ongoing operation of your platform engineering solution is the support you offer your
+    internal customers. While it is tempting to think you'll have a captive audience with a mandate to use your
+    platform, in reality, you are competing with how DevOps teams used to do things. If your IDP does not work as
+    expected (which is inevitable at some point, given the scope of what platform engineering encompasses), you must
+    have a responsive support channel. Otherwise, your customers will revert to their existing processes.</p>
+
+<p>Your documentation and training efforts can significantly complement your support processes. Ideally, supporting your
+    customers means pointing them to the documentation or training that answers their questions, addressing a bug, or
+    accepting a feature request.</p>
+
+<p>A responsive support layer is critical to prevent your solution from being the blocker a platform team should remove.
+    Nothing is more detrimental to DevEx than the broken flow caused by a blocking issue and an unresponsive support
+    team.</p>
+
+<p>Note that being responsive is not the same as solving every problem. It is an anti-pattern to move all the pain to
+    the platform team by expecting them to provide site reliability services, general advice, or function as a help
+    desk.</p>
+
+<p>Platform teams must balance many concerns while interacting with their customers:</p>
+
+<ol>
+    <li>To provide internal customers with opinionated solutions.</li>
+    <li>To support these solutions to prevent customers from being blocked.</li>
+    <li>To encourage customers to implement their own solutions and incorporate those improvements into your IDP.</li>
+    <li>To manage the potential expectation that the platform team will immediately support anyone with any issue.</li>
+</ol>
+
+<p>The best way to maintain this balance is to clearly define levels of responsibility. This ensures the platform team
+    and their customers have a clear understanding of who is responsible for maintaining the artifacts generated by an
+    IDP. The chapter "Platform Engineering Responsibilities" discusses different responsibility models.</p>
+
+<h2>Issue Tracking and Feature Requests</h2>
+
+<p>The ability to track the status of issues discovered in your IDP and to track any progress with feature requests
+    provides your customers confidence that bugs are being fixed and requests are taken seriously.</p>
+
+<p>Your customers will be technical people familiar with issue-tracking platforms like Jira, GitHub, Bugzilla, etc. You
+    will likely have an issue tracker already in use by your DevOps teams, and reusing it for your IDP is a natural
+    choice.</p>
+
+<p>Be confident enough to admit you must wait to implement new features. While working in product teams, I was
+    overwhelmed with requests for new features and improvements and felt that confessing that we wouldn't consider even
+    great ideas for at least 6 to 12 months was admitting defeat. Often, I just ignored these requests, but that was a
+    mistake. Having been on the other side of that conversation, I'd prefer an honest answer to no answer.</p>
+
+<h2>Marketing</h2>
+
+<p>Building an IDP is a long-term commitment, and as you fix bugs, add features, or respond to changing requirements,
+    you must be able to publish new and improved solutions to your internal customers.</p>
+
+<p>Typically, your IDP will either push changes out to your customers or allow them to pull the changes as they are made
+    available. If you opt for a pull-based approach, you'll need a method for notifying your customers of new
+    features.</p>
+
+<p>However, as impressive as your IDP may be, you will only reach the point of needing such a solution when your
+    customers already have a dozen other platforms they need to use every day. One of the challenges of running a
+    startup is respecting your customers' attention and not abusing that relationship with noise.</p>
+
+<p>Most DevOps teams have an internal chat solution, which can be a low-friction method of announcing features or
+    changes. Lunch-and-learn sessions are another excellent way to reach your internal customers. Also, consider
+    recording a demonstration of the new features and sharing it as a monthly webinar.</p>
+
+<p>One of the tips I learned when I moved to a sales team was the value of existing, general-purpose meetings
+    preallocated in a team’s calendar. Never underestimate how hard it is to find a time for everyone to meet. Being
+    able to present at a lunch-and-learn is an incredible opportunity for your marketing efforts.</p>
+
+<h2>Feedback</h2>
+
+<p>Feedback from your customers is crucial to understanding whether you are meeting their expectations.</p>
+
+<p>There are many examples of embedding feedback into processes, including:</p>
+<ol>
+    <li>Net Promoter Score (NPS)</li>
+    <li>Customer Satisfaction Score (CSAT)</li>
+    <li>Questionnaires</li>
+</ol>
+
+<p>Remember, though, that high-quality feedback scores require an appropriate sample size. Unless many internal
+    customers use your IDP, you may not be able to source feedback from enough people to generate meaningful scores.</p>
+
+<p>In the paper “Belief in the Law of Small Numbers”, Kahneman and Tversky define the Law of Small Numbers as the
+    mistaken belief that a small sample accurately reflects the probabilities of a population. With small sample sizes,
+    those few customers who felt like providing feedback may unduly influence how well you believe all customers
+    received your IDP.</p>
+
+<p>The effort spent encouraging your internal customers to supply feedback may be better spent scheduling user
+    interviews after releasing features or on a regular schedule. Compared to most product teams, you have the advantage
+    of working side by side with your customers, and it would be a missed opportunity not to take advantage of this.</p>
+
+<p>However, there is still value in offering a real-time feedback mechanism, if only to provide an outlet for frustrated
+    customers to signal their displeasure. Just as most product teams would prefer to receive such feedback directly
+    rather than second hand via channels like social media, platform teams benefit from the opportunity to resolve these
+    issues directly rather than hear from the CTO that their IDP is not meeting expectations.</p>
+
+<p><i>A common pattern I have noticed in many mobile apps is a two-step feedback process. The first question is designed
+    to gauge whether the customer would provide a positive or negative rating. Those that indicated they would provide a
+    negative rating are redirected to an internal feedback channel, while those providing positive feedback are
+    forwarded to the public app store.</i></p>
+
+<p>So while low-touch feedback methods like NPS and CSAT scores may not provide reliable metrics with small sample
+    sizes, it is still worth collecting this data. Conversations with customers are where you will find the actual
+    value. But offering a way to submit negative feedback provides platform teams the opportunity to quickly resolve, or
+    at least understand, points of friction. Meanwhile, any positive feedback is marketing gold, regardless of the
+    statistical significance.</p>
+
+<h2>Example Checklist</h2>
+
+<p>The following checklist is an example that documents how you might address the activities noted in this chapter. As
+    you can see, this example checklist is not complicated, but it does commit the platform team to:</p>
+
+<ol>
+    <li>Defining the mission statement</li>
+    <li>Selecting individuals for user interviews</li>
+    <li>Writing introductory documentation</li>
+    <li>Creating onboarding training</li>
+    <li>Selecting support and notifications platforms</li>
+    <li>Committing to regular internal announcements to demonstrate new features</li>
+    <li>Planning follow-up user interviews at regular intervals to gain feedback</li>
+</ol>
