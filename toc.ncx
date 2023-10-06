@@ -31,7 +31,7 @@ including those conforming to the relaxed constraints of OPS 2.0 -->
     </navPoint>
     <navPoint class="titlepage" id="intro" playOrder="2">
       <navLabel><text>Introduction</text></navLabel>
-      <content src="book.html#intro" />
+      <content src="book.html#introduction" />
     </navPoint>
     <!--
         Add new navPoint elements for each chapter here
