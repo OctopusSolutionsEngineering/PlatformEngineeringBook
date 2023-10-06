@@ -21,7 +21,7 @@ jobs:
       env:
         VERSION: 0.1.${{ github.run_number }}
       run: |-
-        sudo apt-get install -y ruby-full build-essential zlib1g-dev python2 dos2unix libegl1 libopengl0
+        sudo apt-get install -y ruby-full build-essential zlib1g-dev python2 dos2unix libegl1 libopengl0 epubcheck
         echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
         echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
         echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
@@ -32,8 +32,8 @@ jobs:
         chmod +x create-epub.sh
         ./create-epub.sh
 
-    - name: Validate HTML
-      run: python2 ./scripts/html5check.py -h ./_site/book/book.html
+    - name: Validate EPUB
+      run: epubcheck _site/book/MyBook.epub
 
     - name: Install Calibre
       run: sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo --preserve-env=CALIBRE_INSTALLER_LOCAL_URL sh /dev/stdin version=6.13.0
