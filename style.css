@@ -83,3 +83,7 @@ h2, h3 {
 .table-of-contents li a {
     color: #0d80d8;
 }
+
+.quote {
+    margin-left: 2em;
+}
