@@ -10,6 +10,6 @@ if [ -f MyBook.epub ]; then
 fi
 echo -n "application/epub+zip" > mimetype
 zip -0Xq "MyBook.epub" "mimetype"
-zip -Xr9Dq "MyBook.epub" * -x "mimetype" -x "scripts/*" -x README.md
+zip -Xr9Dq "MyBook.epub" * -x "mimetype" -x "scripts/*" -x README.md -x *.odt -x LICENSE -x pdf-cover.*
 popd || exit
 popd || exit
