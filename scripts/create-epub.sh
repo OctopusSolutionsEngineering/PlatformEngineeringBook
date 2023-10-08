@@ -11,5 +11,6 @@ fi
 echo -n "application/epub+zip" > mimetype
 zip -0Xq "MyBook.epub" "mimetype"
 zip -Xr9Dq "MyBook.epub" * -x "mimetype" -x "scripts/*" -x README.md -x *.odt -x LICENSE -x pdf-cover.*
+zip html.zip book.html style.css images/*.png 
 popd || exit
 popd || exit
