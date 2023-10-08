@@ -74,7 +74,7 @@ jobs:
         asset_content_type: application/zip
 
     - name: Upload HTML ZIP
-      id: upload-release-asset-epub
+      id: upload-release-asset-zip
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
