@@ -7,12 +7,12 @@
 <p class="quote">If it hurts, do it more often.</p>
 
 <p>Exact numbers around the value of finding bugs earlier are hard to come by. The post “Everyone cites that 'bugs are
-    100x more expensive to fix in production' research, but the study might not even exist” (https://oc.to/rLmuBw)
+    100x more expensive to fix in production' research, but the study might not even exist” (<a href="https://oc.to/rLmuBw">https://oc.to/rLmuBw</a>)
     references research from Hillel Wayne that questions the validity of this commonly cited metric. However, the byline
     of that article concedes, "It's probably still true, though, says formal methods expert."</p>
 
 <p>While it doesn’t provide meme-worthy quotes, the report “The Economic Impacts of Inadequate Infrastructure for
-    Software Testing” (https://oc.to/Tq1Zlh), prepared for the National Institute of Standards and Technology (NIST),
+    Software Testing” (<a href="https://oc.to/Tq1Zlh">https://oc.to/Tq1Zlh</a>), prepared for the National Institute of Standards and Technology (NIST),
     performed a case study in the financial services sector to estimate the economic impact of inadequate infrastructure
     for software testing, finding:</p>
 
@@ -292,15 +292,15 @@
     compatibility.</p>
 
 <p>However, backward and forward compatibility is not trivial to implement. In the presentation Update your Database
-    Schema with Zero Downtime Migrations (https://oc.to/BzKUy3), based on chapter 3 of the book Migrating to
-    Microservice Databases (https://oc.to/nLvrV4), Edison Yanaga walks through the process of renaming a single column
+    Schema with Zero Downtime Migrations (<a href="https://oc.to/BzKUy3">https://oc.to/BzKUy3</a>), based on chapter 3 of the book Migrating to
+    Microservice Databases (<a href="https://oc.to/nLvrV4">https://oc.to/nLvrV4</a>), Edison Yanaga walks through the process of renaming a single column
     in a database. It involves six incremental updates to the database and application code, and you must deploy each in
     sequence.</p>
 
 <p>Seamless deployments involving a database require careful planning, many small steps to roll out the changes, and
     tight coordination between the database and application code.</p>
 
-<p>You can find more database techniques in Refactoring Databases (https://oc.to/huM7G3) by Scott W. Ambler and Pramod
+<p>You can find more database techniques in Refactoring Databases (<a href="https://oc.to/huM7G3">https://oc.to/huM7G3</a>) by Scott W. Ambler and Pramod
     Saalage.</p>
 
 <h3>Deployment Strategies</h3>
@@ -404,19 +404,19 @@
 <p>Either solution works with stateless applications, but you must treat rollbacks with care when there's a database
     involved.</p>
 
-<p>This is the advice from the FlyWay project (https://oc.to/lVr2Zn):</p>
+<p>This is the advice from the FlyWay project (<a href="https://oc.to/lVr2Zn">https://oc.to/lVr2Zn</a>):</p>
 
 <p class="quote">While the idea of undo migrations is nice, unfortunately it sometimes breaks down in practice. As soon
     as you have
     destructive changes (drop, delete, truncate, …), you start getting into trouble. And even if you don't, you end up
     creating home-made alternatives for restoring backups, which need to be properly tested as well.</p>
 
-<p>RedGate offers this advice for database rollbacks (https://oc.to/sbc7WW):</p>
+<p>RedGate offers this advice for database rollbacks (<a href="https://oc.to/sbc7WW">https://oc.to/sbc7WW</a>):</p>
 
 <p class="quote">Rather than investing time and energy into rollback planning, an alternative is to follow an approach
     that keeps you moving forward.</p>
 
-<p>The blog post “Pitfalls with SQL rollbacks and automated database deployments” (https://oc.to/WRvLE4) has this
+<p>The blog post “Pitfalls with SQL rollbacks and automated database deployments” (<a href="https://oc.to/WRvLE4">https://oc.to/WRvLE4</a>) has this
     advice:</p>
 <p class="quote">
     More often than not, the effort to successfully rollback a deployment far exceeds the effort it would take to push a
@@ -540,7 +540,7 @@
     all the application's dependencies is essential for security, auditing, and debugging.</p>
 
 <p>Legislation such as the Cyber Resilience Act (CRA) and the requirements of the NIST “Software Supply Chain Security
-    Guidance Under Executive Order (EO) 14028” (https://oc.to/T3b11u) may compel you to produce Software Bill or
+    Guidance Under Executive Order (EO) 14028” (<a href="https://oc.to/T3b11u">https://oc.to/T3b11u</a>) may compel you to produce Software Bill or
     Materials (SBOMs) to accompany your application, making the management of library dependencies a requirement of your
     CI/CD pipeline.</p>
 
