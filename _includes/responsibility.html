@@ -32,7 +32,7 @@
     makes a copy, they assume responsibility for using, editing, and updating that copy. Existing copies do not receive
     updates to the source template document.</p>
 
-<p>In the same way, the IDP does not provide updates for artifacts like sample projects or scripts, deployment
+<p>In the same way, your IDP does not provide updates for artifacts like sample projects or scripts, deployment
     pipelines, or example dashboards. The platform team only supports them in a limited fashion once a customer has
     taken ownership under a customer responsibility model.</p>
 
@@ -52,26 +52,26 @@
 
 <h2>Shared Responsibility</h2>
 
-<p>The shared responsibility model allows the customer and the platform team to modify an artifact after creation. An
+<p>The shared responsibility model allows the customer and the platform team to modify an IDP artifact after creation. An
     example of this model is the process of forking a Git repository. Because both Git repositories share the same
     history, it is possible to merge changes between them while retaining any local changes.</p>
 
-<p>This model may involve the platform engineering team pushing changes, the customer pulling modifications, or
+<p>This model may involve the platform engineering team pushing changes, the customer pulling changes, or
     both.</p>
 
 <p>Git is an excellent example of the shared responsibility model and one of the most practical ways to implement it.
     The merging strategies implemented by Git do an excellent job of tracking changes (as opposed to simply finding
     differences between files). By having your IDP generate Git repositories as artifacts, it becomes possible to merge
-    the downstream (or customer controlled) repositories and upstream (or platform team controlled) repositories.</p>
+    the downstream (or customer controlled) repositories and upstream (or IDP controlled) repositories.</p>
 
 <p>Git is not a requirement to implement the shared repository model, though. A regular diff between two plain text
     files may be sufficient for customers and the platform team to consolidate changes made by each other. As a
-    fallback, good old copy and paste may suffice to synchronize changes.</p>
+    fallback, copy and paste may suffice to synchronize changes.</p>
 
 <p>Like the customer responsibility model, the shared responsibility model helps prevent the platform team from being a
     blocker, as customers have the ability and responsibility to update their artifacts to resolve any issues.</p>
 
-<p>The shared responsibility model can propagate changes from artifacts maintained by the platform team to those
+<p>The shared responsibility model can propagate changes from artifacts maintained by the IDP to those
     maintained by the customer.</p>
 
 <p>However, be aware that it may not be reasonable, or even possible, to propagate changes to heavily modified customer
@@ -84,7 +84,7 @@
 <h2>Centralized Responsibility</h2>
 
 <p>The centralized responsibility model gives customers read-only or locked-down copies of any generated artifacts.
-    While customers are free to use these artifacts, they have little or no ability to edit them.</p>
+    While customers are free to use these artifacts, they have little or no ability to customize them.</p>
 
 <p>An analogy is a virus scanner deployed to your workstation by the security team. You can run the virus scanner, but
     you cannot configure it. A central team manages any updates to the virus scanner or its configuration.</p>
