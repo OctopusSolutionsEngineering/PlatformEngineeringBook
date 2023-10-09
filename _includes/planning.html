@@ -2,7 +2,8 @@
 
 <p>It is tempting to think platform engineering has a simple, technical solution. Perhaps a YAML template for your
     Kubernetes cluster, a script for your CI/CD pipeline, or a custom web app providing a dashboard and internal
-    registry of templates will solve the immediate requirements. But this technical focus misses the opportunity a platform
+    registry of templates will solve the immediate requirements. But this technical focus misses the opportunity a
+    platform
     team can bring to your organization.</p>
 
 <p>Platform engineering means building a DevEx as a Service platform. A platform team is effectively
@@ -10,7 +11,8 @@
     internal customers.</p>
 
 <p>Running an internal startup can be daunting because platform engineering teams must draw from the work typically done
-    by dedicated engineering, support, technical writing, training, developer relations (DevRel), product, and design teams. However, addressing a few
+    by dedicated engineering, support, technical writing, training, developer relations (DevRel), product, and design
+    teams. However, addressing a few
     key activities early in the inception of a platform team provides a solid foundation for future growth while
     retaining the agility required to keep pace with high-performing DevOps teams.</p>
 
@@ -29,18 +31,32 @@
     product manager; at firms in which a platform team has existed for more than three years, this number rises to
     74%.</p>
 
-<p>You can expect a successful platform engineering strategy to work closely with, or incorporate, other specialized roles 
-    such as DevRel, technical support, technical writers, security, and site reliability. That said, though, generalists will serve 
+<p>You can expect a successful platform engineering strategy to work closely with, or incorporate, other specialized
+    roles
+    such as DevRel, technical support, technical writers, security, and site reliability. That said, though, generalists
+    will serve
     your initial platform well by being able to draw on experience from various backgrounds.</p>
 
-<p>The Forbes article “Generalist Vs. Specialist Teams: How To Build A Highly Creative Startup” 
-    (<a href="https://oc.to/jkdl9C">https://oc.to/jkdl9C</a>) notes that the unpredictable nature of startups does not support 
+<p>The Forbes article “Generalist Vs. Specialist Teams: How To Build A Highly Creative Startup”
+    (<a href="https://oc.to/jkdl9C">https://oc.to/jkdl9C</a>) notes that the unpredictable nature of startups does not
+    support
     specialization:</p>
 
 <p class="quote">In highly-predictable environments, specialization allows you to solve problems very
     efficiently. In unpredictable
     environments, however, efficiency isn’t as important as creativity. And the environment of innovative startups is
     anything but predictable.</p>
+
+<p>The flip side of bringing people into a platform team is to consider the option of secondments to embed members of
+    the platform team back into the wider DevOps teams as a method of sharing knowledge and experience.
+
+    David Jorm, Head Of Security At x15ventures, noted in the podcast "The Journey To Build your Platform Engineering
+    Team" (<a href="https://oc.to/a07RuP">https://oc.to/a07RuP</a> that:
+</p>
+
+<p class="quote">One of the ways to solve [architectural and cultural issues] is to get secondments from the core
+    platform team into that individual engineering team so that I can bring access some of the thinking behind what was
+    done there.</p>
 
 <p>The activities listed in this chapter support teams in the initial stages of their platform engineering journey. The
     aim is not to make the platform team experts in product management, marketing, technical writing, and training.
@@ -65,7 +81,8 @@
     scalability, and maintainability). It must also positively influence the business concerns listed in the
     "Quantifying the Business Value" section of cost, risk, revenue, and shareholder value.</p>
 
-<p>You can find a comprehensive list of non-functional requirements on Wikipedia (<a href="https://oc.to/UD2mRM">https://oc.to/UD2mRM</a>), while the
+<p>You can find a comprehensive list of non-functional requirements on Wikipedia (<a href="https://oc.to/UD2mRM">https://oc.to/UD2mRM</a>),
+    while the
     chapter “The Ten Pillars of Pragmatic Deployments” documents non-functional requirements tailored to CI/CD
     pipelines.</p>
 
@@ -87,7 +104,8 @@
     pain and wishes and repeating these observations as you talk about the goals and features of your IDP.</p>
 
 <p>Courtney Kissler, who led large-scale reorganizations and technology transformations at Starbucks, Nike, and Zulily,
-    notes in her presentation “How to build internal platforms for the enterprise” (<a href="https://oc.to/V0pDUd">https://oc.to/V0pDUd</a>) that:</p>
+    notes in her presentation “How to build internal platforms for the enterprise” (<a href="https://oc.to/V0pDUd">https://oc.to/V0pDUd</a>)
+    that:</p>
 
 <p class="quote">Just because you build a platform doesn't mean people are going to consume it.</p>
 
@@ -108,7 +126,8 @@
     been granted the opportunity to build an IDP, user interviews are still as much about selling the benefits of an IDP
     as it is about gathering requirements (or, in other words, being an order-taker).</p>
 
-<p>The Forbes article “Why Most Salespeople Are Order Takers And Not Sellers” (<a href="https://oc.to/VmnpgR">https://oc.to/VmnpgR</a>) notes that:</p>
+<p>The Forbes article “Why Most Salespeople Are Order Takers And Not Sellers” (<a href="https://oc.to/VmnpgR">https://oc.to/VmnpgR</a>)
+    notes that:</p>
 
 <p class="quote">Selling is about change, and it's salespeople's job to influence that change. Salespeople
     who can't influence change are simply order-takers.</p>
@@ -174,7 +193,8 @@
 <ol>
     <li>To provide internal customers with opinionated solutions.</li>
     <li>To support these solutions to prevent customers from being blocked.</li>
-    <li>To encourage customers to implement their own customizations and incorporate those improvements into your IDP.</li>
+    <li>To encourage customers to implement their own customizations and incorporate those improvements into your IDP.
+    </li>
     <li>To manage the potential expectation that the platform team will immediately support anyone with any issue.</li>
 </ol>
 
@@ -229,14 +249,16 @@
 </ol>
 
 <p>Remember, though, that high-quality feedback scores require an appropriate sample size. Unless many internal
-    customers use your IDP, you may not be able to passively source feedback from enough people to generate meaningful scores.</p>
+    customers use your IDP, you may not be able to passively source feedback from enough people to generate meaningful
+    scores.</p>
 
 <p>In the paper “Belief in the Law of Small Numbers”, Kahneman and Tversky define the Law of Small Numbers as the
     mistaken belief that a small sample accurately reflects the probabilities of a population. With small sample sizes,
     those few customers who felt like providing feedback may unduly influence how well you believe all customers
     received your IDP.</p>
 
-<p>The effort spent encouraging your internal customers to supply asynchronous feedback may be better spent scheduling user
+<p>The effort spent encouraging your internal customers to supply asynchronous feedback may be better spent scheduling
+    user
     interviews after releasing features or on a regular schedule. Compared to most product teams, you have the advantage
     of working side by side with your customers, and it would be a missed opportunity not to take advantage of this.</p>
 
