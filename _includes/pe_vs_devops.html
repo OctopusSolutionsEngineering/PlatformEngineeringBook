@@ -1,6 +1,7 @@
 <h1><a id="pevsdevops">Platform Engineering vs. DevOps</a></h1>
 
-<p>You can find many resources dedicated to DevOps, yet the concept can be very frustrating for those who have had to apply
+<p>You can find many resources dedicated to DevOps, yet the concept can be very frustrating for those who have had to
+    apply
     it meaningfully. To understand why DevOps has become so contentious, we will investigate it by exploring the
     counterfactual "What is DevOps not?"</p>
 
@@ -17,7 +18,8 @@
 <p>We then have measurements that gauge the performance of DevOps teams. The DORA Accelerate State of DevOps report has
     five key metrics: deployment frequency, lead time for changes, change failure rate, time to restore service, and
     reliability. These are referred to as the DORA metrics. The report also links organizational performance to the
-    characteristics described by Westrum's organizational culture (<a href="https://oc.to/r2TWX0">https://oc.to/r2TWX0</a>), where generative cultures high
+    characteristics described by Westrum's organizational culture (<a
+            href="https://oc.to/r2TWX0">https://oc.to/r2TWX0</a>), where generative cultures high
     in trust and low in blame exhibit higher performance.</p>
 
 <p>These definitions show us that the processes and cultural foundations that support and improve the delivery of
@@ -31,36 +33,47 @@
     the question “What is DevOps not?”</p>
 
 <p>There is no satisfying answer to that question. The term DevOps has become almost unfalsifiable, but this is quite by
-    design. DevOps has unashamedly sought to break down silos and absorb responsibilities that previously separated teams
+    design. DevOps has unashamedly sought to break down silos and absorb responsibilities that previously separated
+    teams
     creating and delivering technical solutions, while simultaneously building a culture of psychological safety to
     encourage creative problem solving. The ideal DevOps team is self-sufficient, with the ability,
     willingness, confidence, and responsibility to tackle any and every problem.</p>
 
-<p>But for every ideal DevOps team thriving on the responsibility of owning their own destiny, there is another team slowly
-    drowning under the constant need to resolve every brittle process they encounter in the DevOps lifecycle. The mental
+<p>But for every ideal DevOps team thriving on the responsibility of owning their own destiny, there is another team
+    slowly
+    drowning under the constant need to resolve every brittle process and incorporate every new responsibility
+    encountered in the DevOps lifecycle. The mental
     burden of this undifferentiated and unsatisfying work has come to define their existence, leading to a downward
     spiral of dispirited and low performing teams. Or, put more simply, teams with an unsatisfactory developer
     experience.</p>
 
 <p><i>
-    I found myself working as a developer on a codebase whose test suite would fail far more often than it passed. A few manual retries
+    I found myself working as a developer on a codebase whose test suite would fail far more often than it passed. A few
+    manual retries
     would solve the issue and ensure that pull requests could progress, although retrying the tests could take days.
-</i></p>
-    
-<p><i>
-    The suggestion proposed by the engineering leadership at the time was that everyone should stop what they were doing and fix the
-    tests. This is typically sound advice, and very much in line with practices like Test Driven Design (TDD). Unfortunately, every developer
-    on the team intrincially understood that fixing the tests was a dedicated project it its own right. There were no quick wins.
 </i></p>
 
 <p><i>
-    This forced everyone to quietly calculate the tradeoffs between wasting days on test retries and devoting weeks to undertaking
-        the unplanned work of fixing the tests. Needless to say, we ended up wasting a lot of time clicking that retry button.
+    The suggestion proposed by the engineering leadership at the time was that everyone should stop what they were doing
+    and fix the
+    tests. This is typically sound advice, and very much in line with practices like Test Driven Design (TDD).
+    Unfortunately, every developer
+    on the team intrincially understood that fixing the tests was a dedicated project it its own right. There were no
+    quick wins.
+</i></p>
+
+<p><i>
+    This forced everyone to quietly calculate the tradeoffs between wasting days on test retries and devoting weeks to
+    undertaking
+    the unplanned work of fixing the tests. Needless to say, we ended up wasting a lot of time clicking that retry
+    button.
 </i>
 </p>
 
-<p><i>Fixing tests is arguably not the domain of platform engineering, as we'll see in the next section. But is is very much in the 
-    domain of DevOps. This example neatly highlights the delima faced by DevOps teams expected to take responsibility for every 
+<p><i>Fixing tests is arguably not the domain of platform engineering, as we'll see in the next section. But it is very
+    much in the
+    domain of DevOps. This example neatly highlights the dilemma faced by DevOps teams expected to take responsibility
+    for every
     point of friction in their workflow. </i></p>
 
 <h2>What is Platform Engineering?</h2>
@@ -79,7 +92,8 @@
     work often performed by DevOps teams. This avoids the unfalsifiability of DevOps. The difference between DEaaS and
     other tasks is whether the work can be used as the foundation for a new project or team.</p>
 
-<p>Consider that every major Operating System (OS) these days has the ability to host VMs. Does that mean you have
+<p>Consider that every major Operating System (OS) these days has the ability to host Virtual Machines (VMs). Does that
+    mean you have
     implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires the ability to
     provision a durable, accessible, supported, and monitored VM on demand, or at least with as little friction as
     possible.</p>
@@ -147,7 +161,10 @@
 <h2>Conclusion</h2>
 
 <p>DevOps is arguably the best philosophy we have to build high performing teams to deliver technical solutions. But
-    just because DevOps can be used as teh foundation for great teams, there is no guarantee that it will.</p>
+    while DevOps can be used as the foundation for great teams, the demands placed on teams must be matched
+    by their capability. Asking DevOps teams to provide their own unique implementation to every requirement leads to
+    inconsistent solutions at best and eventually creates an unsustainable environment. This in turn leads to
+    frustration and poor DevEx.</p>
 
 <p>Platform engineering is an acknowledgment that common problems are best solved with common solutions, and that
     solving common problems is one of the most effective methods for improving DevEx.</p>
