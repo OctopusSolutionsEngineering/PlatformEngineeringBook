@@ -87,3 +87,10 @@ h2, h3 {
 .quote {
     margin-left: 2em;
 }
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-left: unset;
+    margin-right: unset;
+}
