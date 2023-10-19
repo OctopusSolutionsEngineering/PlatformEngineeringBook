@@ -10,18 +10,18 @@
 
 <p>
     The purpose of an IDP is to generate opinionated artifacts embedding the accumulated business knowledge and best
-    practices
-    learned by your customers over the years. By design, these artifacts abstract away much of the tribal knowledge
-    required
-    to build high quality solutions, allowing DevOps team to focus on solving novel problems rather than duplicating the
-    effort required to solve already solved problems.
+    practices learned by your customers over the years. By design, these artifacts abstract away much of the tribal
+    knowledge required to build high quality solutions, allowing DevOps team to focus on solving novel problems rather
+    than duplicating the effort required to solve already solved problems.
 </p>
 
 <p>
     The challenge when developing such abstractions is to strike the right balance between hiding complexity and
-    enabling flexibility. </p>
+    enabling flexibility.
+</p>
 
-<p>Platform teams have the added challenge of being compared to the established platforms their IDP seeks to
+<p>
+    Platform teams have the added challenge of being compared to the established platforms their IDP seeks to
     abstract away. The reality is that these existing platforms were adopted because of the many years, countless hours,
     and eye-watering sums of money that were spent refining the balance between complexity and flexibility. For example,
     popular operating systems, hypervisors, cloud platforms, and container orchestration platforms all have billions
@@ -35,7 +35,8 @@
 </p>
 
 <p>
-    It is not a question of whether abstractions are valuable or possible to build correctly, as every successful piece of
+    It is not a question of whether abstractions are valuable or possible to build correctly, as every successful piece
+    of
     technology is an example of building a useful abstraction: a car abstracts the complexity of an engine and
     transmission behind a steering wheel, accelerator, and brake; an electrical powerpoint abstracts the continent sized
     infrastructure of a power grid; and a phone abstracts a worldwide communication network. The better question,
@@ -44,9 +45,42 @@
 </p>
 
 <p>
-    The only safe answer to this question is "No". You will never have perfect knowledge of your customer's needs, and
-    it will never feel like your platform team has enough time to continually refine the abstractions.
+    The only safe initial answer to this question is "No", with an aim to reach the point where the answer is "Yes, but...".
+    You will never have perfect knowledge of your customer's needs, but a successful platform team can refine their
+    abstractions over time. But you do need to have some level of early success to earn the time required to refine
+    your solutions.
 </p>
+
+<p>
+    Anyone aiming to provide an opinionated solution faces this same dilemma, but the survivorship bias of every
+    successful abstraction you see in daily life can make it seem like building abstractions is easy. However, new
+    platform teams must assume building abstractions is, in fact, quite difficult, and therefor have a plan to support
+    customers with unique needs or opinions of their own. This is the crux of the responsibility levels presented in
+    the chapter "Platform Engineering Responsibility Models":
+</p>
+
+<ul>
+    <li>
+        Centralized responsibility artifacts provide highly opinionated solutions exposing a relatively small number of
+        options to customize the end result. These artifacts favor enforcing opinions over allowing flexibility. The
+        success of the centralized responsibility model is highly dependent on how closely aligned your abstractions are
+        to the needs of your customers.
+    </li>
+    <li>
+        Shared responsibility artifacts can be modified by customers, providing them with the ability to customize their
+        solution while still allowing the platform team to centrally distribute updates. These artifacts are the most
+        flexible and provide a sliding scale between enforcing opinions and exposing flexibility (with the caveat that increased
+        customization will typically decrease the ability to centrally distribute updates). The shared responsibility
+        model assumes abstractions will be imperfect and emphasises a workflow that allows platform teams and their
+        customers to jointly refine the solution over time.
+    </li>
+    <li>
+        Customer responsibility artifacts provide customers with a base template that they are expected to own and
+        modify to suit their needs. While the templates can provide an initial set of opinions, they are
+        expected to be heavily modified. The customer responsibility model assumes customers will keep what is useful
+        and discard what is not.
+    </li>
+</ul>
 
 <p>
 
