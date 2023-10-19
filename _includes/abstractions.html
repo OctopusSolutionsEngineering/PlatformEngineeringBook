@@ -1,0 +1,53 @@
+<h1><a id="abstractions">The "abstractions with infinite flexibility" fallacy</a></h1>
+
+<p>Those looking to introduce platform engineering into existing DevOps teams face three common realities:</p>
+
+<ul>
+    <li>Your IDP is a greenfield project</li>
+    <li>Your platform team must reduce the mental burden of an existing, complex environment</li>
+    <li>Your customers are technically adept</li>
+</ul>
+
+<p>
+    The purpose of an IDP is to generate opinionated artifacts embedding the accumulated business knowledge and best
+    practices
+    learned by your customers over the years. By design, these artifacts abstract away much of the tribal knowledge
+    required
+    to build high quality solutions, allowing DevOps team to focus on solving novel problems rather than duplicating the
+    effort required to solve already solved problems.
+</p>
+
+<p>
+    The challenge when developing such abstractions is to strike the right balance between hiding complexity and
+    enabling flexibility. </p>
+
+<p>Platform teams have the added challenge of being compared to the established platforms their IDP seeks to
+    abstract away. The reality is that these existing platforms were adopted because of the many years, countless hours,
+    and eye-watering sums of money that were spent refining the balance between complexity and flexibility. For example,
+    popular operating systems, hypervisors, cloud platforms, and container orchestration platforms all have billions
+    of dollars worth of development behind them.
+</p>
+
+<p>
+    Meanwhile, enough of your customers will be comfortable with these underlying platforms, meaning they will quickly
+    spot, and likely be frustrated by, the limitations of your abstractions. This risks making your IDP the kind of
+    blocker that it was supposed to remove.
+</p>
+
+<p>
+    It is not a question of whether abstractions are valuable or possible to build correctly, as every successful piece of
+    technology is an example of building a useful abstraction: a car abstracts the complexity of an engine and
+    transmission behind a steering wheel, accelerator, and brake; an electrical powerpoint abstracts the continent sized
+    infrastructure of a power grid; and a phone abstracts a worldwide communication network. The better question,
+    especially for new platform teams, is whether you have the knowledge to create the correct level of abstraction
+    first time, or the time to refine these abstractions as you acquire more knowledge?
+</p>
+
+<p>
+    The only safe answer to this question is "No". You will never have perfect knowledge of your customer's needs, and
+    it will never feel like your platform team has enough time to continually refine the abstractions.
+</p>
+
+<p>
+
+</p>
