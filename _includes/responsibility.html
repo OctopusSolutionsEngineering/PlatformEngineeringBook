@@ -228,7 +228,7 @@
 <p>
     The purpose of an IDP is to generate opinionated artifacts embedding the accumulated business knowledge and best
     practices learned by your customers over the years. By design, these artifacts abstract away much of the tribal
-    knowledge required to build high quality solutions, allowing DevOps team to focus on solving novel problems rather
+    knowledge required to build high quality solutions, allowing DevOps teams to focus on solving novel problems rather
     than duplicating the effort required to solve already solved problems.
 </p>
 
@@ -246,7 +246,7 @@
 </p>
 
 <p>
-    Meanwhile, enough of your customers will be comfortable with these underlying platforms, meaning they will quickly
+    Meanwhile, a good number of your customers will be comfortable with these underlying platforms, meaning they will quickly
     spot, and likely be frustrated by, the limitations of your abstractions. This risks making your IDP the kind of
     blocker that it was supposed to remove.
 </p>
@@ -271,9 +271,8 @@
 <p>
     Anyone aiming to provide an opinionated solution faces this same dilemma, but the survivorship bias of every
     successful abstraction you see in daily life can make it seem like building abstractions is easy. However, new
-    platform teams must assume building abstractions is, in fact, quite difficult, and therefor have a plan to support
-    customers with unique needs or opinions of their own. This is the crux of the responsibilities presented in
-    the chapter "Platform Engineering Responsibility Models":
+    platform teams must assume building abstractions is, in fact, quite difficult, and therefore have a plan to support
+    customers with unique needs or opinions of their own. This is the crux of the previously discussed responsibility models:
 </p>
 
 <ul>
@@ -291,7 +290,7 @@
         flexible and provide a sliding scale between enforcing opinions and exposing flexibility (with the caveat that
         increased
         customization will typically decrease the ability to centrally distribute updates). The shared responsibility
-        model assumes abstractions will be imperfect and emphasises a workflow that allows platform teams and their
+        model assumes abstractions will be imperfect and emphasises a workflow allowing platform teams and their
         customers to jointly refine the solution over time.
     </li>
     <li>
@@ -333,7 +332,7 @@
     highly opinionated steps that supported most common use cases and generic steps that allowed the deployment of
     raw YAML for either Kubernetes resources or CloudFormation templates. Importantly, the opinionated steps offered a
     way
-    to export the equivalent YAML that they would generate, giving customers a way to jump from the opinionated step
+    to export the equivalent YAML they would generate, giving customers a way to jump from the opinionated step
     (which aligns with the central responsibility model) to the generic step (which aligns with the customer
     responsibility model).
 </i></p>
