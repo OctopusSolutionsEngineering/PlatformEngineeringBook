@@ -42,6 +42,7 @@ jobs:
         CALIBRE_INSTALLER_LOCAL_URL: https://octopus-sales-engineering.s3.ap-southeast-2.amazonaws.com/calibre-6.13.0-x86_64.txz
     
     - name: Convert to PDF
+      if: github.event_name != 'pull_request'
       run: |
         ebook-convert \
         _site/book/MyBook.epub \
@@ -55,6 +56,7 @@ jobs:
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
+      if: github.event_name != 'pull_request'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -66,6 +68,7 @@ jobs:
     - name: Upload EPUB Release Asset
       id: upload-release-asset-epub
       uses: actions/upload-release-asset@v1
+      if: github.event_name != 'pull_request'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -76,6 +79,7 @@ jobs:
 
     - name: Upload HTML ZIP
       id: upload-release-asset-zip
+      if: github.event_name != 'pull_request'
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -87,6 +91,7 @@ jobs:
 
     - name: Upload PDF Release Asset
       id: upload-release-asset-pdf
+      if: github.event_name != 'pull_request'
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -97,6 +102,7 @@ jobs:
         asset_content_type: application/pdf
 
     - name: Build printable EPUB
+      if: github.event_name != 'pull_request'
       env:
         VERSION: 0.1.${{ github.run_number }}
       run: |-
@@ -106,6 +112,7 @@ jobs:
         ./create-epub-kdp.sh
 
     - name: Upload Printable EPUB Release Asset
+      if: github.event_name != 'pull_request'
       id: upload-release-asset-printable-epub
       uses: actions/upload-release-asset@v1
       env:
