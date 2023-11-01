@@ -25,12 +25,12 @@
     and ship.</p>
 
 <p>Identifying issues early in the DevOps lifecycle means identifying them while planning new features, writing and
-    testing code, or as part of your Continuous Integration and Delivery (CI/CD) pipeline. The remainder of the DevOps
-    lifecycle takes place after code is deployed to production, which are the lifecycle stages that issue identification
-    and rectification is ideally moved out of.</p>
+    testing code, or as part of your Continuous Integration and Delivery (CI/CD) pipeline. The rest of the DevOps
+    lifecycle takes place after you deploy code to production. These are are the lifecycle stages that issue identification
+    and rectification are ideally moved out of.</p>
 
-<p>Your CI/CD pipeline is a desirable target for your IDP because this process should be mostly automated, allowing
-    DevOps teams to apply improvements at scale. But, more importantly, your existing CI and CD platforms have likely
+<p>Your CI/CD pipeline is a desirable target for your IDP because this process should be mostly automated, so
+    DevOps teams can apply improvements at scale. But, more importantly, your existing CI and CD platforms have likely
     already solved many of the requirements that enable automation:</p>
 
 <ul>
@@ -45,11 +45,12 @@
     <li>DevOps teams are already familiar with them</li>
 </ul>
 
-<p>The chapter "Planning your Internal Developer Platform" recommends clearly defining your IDP's mission to ensure the
-    focus of the platform team on a specific, achievable outcome. This mission statement has two parts: non-functional
-    requirements providing a high-level description of the outcome and functional requirements that describe how the
-    feature works.
-</p>
+<p>The chapter "Planning your Internal Developer Platform" recommends clearly defining your IDP's mission. This ensures the focus of the platform team is on a specific, achievable outcome. This mission statement has 2 parts:</p>
+<ul>
+    <li>Non-functional requirements providing a high-level description of the outcome</li>
+     <li>Functional requirements that describe how the feature works</li>
+</ul>
+
 
 <p>While functional requirements align with DevOps teams' specific processes and goals, non-functional requirements
     represent common high-level scenarios applicable to a wide variety of teams.
@@ -59,14 +60,12 @@
     represent desirable traits to prompt discussions with customers or standardize across your customer base.
 </p>
 
-<h2>Pillar 1. Repeatable Deployments</h2>
+<h2>Pillar 1. Repeatable deployments</h2>
 
 <p>Software teams are deploying software to production more frequently than ever. They also make deployments to
     pre-production environments as part of their deployment pipeline.</p>
 
-<p>To be confident when you change software at high velocity, you need a mix of methods such as test automation,
-    exploratory testing, self-beta testing (drinking your own champagne), and other techniques to confirm the
-    release-ability of your software.</p>
+<p>To be confident when you change software at high velocity, you need a mix of methods to confirm the release-ability of your software. These methods include test automation, exploratory testing, self-beta testing (drinking your own champagne), and other techniques.</p>
 
 <p>These techniques are only helpful if what you deploy to production is the same as what you deploy to your other
     environments.</p>
@@ -74,31 +73,38 @@
 <p>The pillar of repeatable deployments requires you to deploy the same thing in the same way each time you deploy an
     application version.</p>
 
-<h3>General Deployment Concepts</h3>
+<h3>General deployment concepts</h3>
 
 <p>To understand repeatable deployments, we need to fine-tune our definitions. We must be precise with some terms
     relating to deployment pipelines and the timing of different stages.</p>
 
 <h4>Deployment pipelines</h4>
 
-<p>A deployment pipeline starts when you commit code to a source code repository, and it follows the change to the
-    production environment.</p>
+<p>A deployment pipeline starts when you commit code to a source code repository. And it follows the change all the way to the production environment.</p>
 
-<p>Every activity needed to progress the change is part of your deployment pipeline. Code reviews, builds, testing,
-    release management, sign-offs, and deployments are all included, whether manual or automated.</p>
+<p>Every activity to progress the change is part of your deployment pipeline. Whether manual or automated, this includes:</p>
+    
+<ul>
+    <li>Code reviews</li>
+    <li>Builds</li>
+    <li>Testing</li>
+    <li> Release management</li>
+    <li>Sign-offs</li>
+    <li>Deployments</li>
+</ul>
 
 <h4>Continuous Integration</h4>
 
-<p>The most common entry point to a deployment pipeline is continuous integration (CI). This is the process of
+<p>The most common entry point to a deployment pipeline is Continuous Integration (CI). This is the process of
     committing code, compiling it, running tests, packaging a new application version, and publishing it.</p>
 
 <p>Dave Farley and Jez Humble recommend changes are regularly integrated into the main branch in source control (hence
-    the "continuous" in "continuous integration"). Many teams use the term more loosely to define their automated build
+    the "continuous" in "Continuous Integration"). Many teams use the term more loosely to define their automated build
     process.</p>
 
 <h4>Continuous Delivery</h4>
 
-<p>While continuous integration is the automation of creating a deployable package each time the code changes,
+<p>While Continuous Integration is the automation of creating a deployable package each time the code changes,
     Continuous Delivery (CD) extends this through to deployment automation and monitoring.</p>
 
 <p>You might still have some manual stages in your deployment pipeline, such as exploratory testing or an approval
@@ -108,14 +114,12 @@
 
 <h4>Continuous Deployment</h4>
 
-<p>Continuous Deployment takes CI/CD a step further, removing all manual intervention to create a fully automated
-    commit-to-consumer workflow. The deployment pipeline automatically rejects a bad application version and deploys all
-    good versions to production without manual approvals.</p>
+<p>Continuous Deployment takes CI/CD a step further. It removes all manual intervention to create a fully automated commit-to-consumer workflow. The deployment pipeline automatically rejects a bad application version and deploys all good versions to production without manual approvals.</p>
 
 <h4>CI/CD</h4>
-<p>CI/CD refers to the combination of continuous integration with Continuous Delivery or Continuous Deployment.</p>
+<p>CI/CD refers to the combination of Continuous Integration with Continuous Delivery or Continuous Deployment.</p>
 
-<p>Teams commonly deploy to the development environment without manual intervention but allow people to control when
+<p>Teams commonly deploy to the development environment without manual intervention but let people control when
     they deploy to subsequent environments.</p>
 
 <p>CI/CD pipelines don't seem that blog-worthy these days, but when someone talks about their pipelines, it is usually
