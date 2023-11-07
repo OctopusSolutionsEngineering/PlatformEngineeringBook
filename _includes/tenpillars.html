@@ -309,8 +309,8 @@
 <p>The recreate strategy doesn't provide a seamless deployment. It's included here as the default option for most
     deployment processes. This strategy involves either:</p>
 <ul>
-    <li>Removing the existing deployment before deploying the new version.</li>
-    <li>Deploying the new version over the top of the current one.</li>
+    <li>Removing the existing deployment before deploying the new version</li>
+    <li>Deploying the new version over the top of the current one</li>
 </ul>
 
 <p>Both options result in downtime between the existing version being stopped or removed and the new version starting.
@@ -327,7 +327,7 @@
 <p>With rolling updates, your database will need to maintain backward and forward compatibility, as during the rollout
     it will receive connections from both the old and new application versions.</p>
 
-<h4>Canary deployment</h4>
+<h4>Canary deployments</h4>
 
 <p>The canary deployment strategy is similar to the rolling update strategy. Both incrementally expose more end users to the new deployment over time.</p>
 
@@ -339,7 +339,7 @@
     collected information from this group, you can decide whether to continue the rollout. This may be a human decision,
     or you might automate it based on monitoring data or log files.</p>
 
-<p>Canary deployments allow you to halt the rollout and revert to the previous application version if you find a problem
+<p>Canary deployments let you halt the rollout and revert to the previous application version if you find a problem
     in the sample group.</p>
 
 <h4>Blue/green deployments</h4>
@@ -373,7 +373,7 @@
 
 <h4>Feature branch</h4>
 
-<p>The feature branch strategy lets developers deploy an application version with changes they are working on. It's usually deployed in a non-production environment alongside the main deployment.</p>
+<p>The feature branch strategy lets developers deploy an application version with changes they're working on. It's usually deployed in a non-production environment alongside the main deployment.</p>
 
 <p>Maintaining database backward and forward compatibility may not be necessary with feature branch deployments. Because
     feature branches are short-lived for testing, it's acceptable that each deployment has access to an isolated test
