@@ -383,7 +383,7 @@
 <p>Despite your best efforts with repeatable and verifiable deployments, you'll always need to handle production bugs.
     When this happens, quickly and safely recovering is crucial.</p>
 
-<h3>Rolling Back or Forward</h3>
+<h3>Rolling back or forward</h3>
 <p>Recovering from an undesirable deployment means choosing whether to:</p>
 
 <ul>
@@ -401,7 +401,7 @@
     destructive changes (drop, delete, truncate, …), you start getting into trouble. And even if you don't, you end up
     creating home-made alternatives for restoring backups, which need to be properly tested as well.</p>
 
-<p>RedGate offers this advice for database rollbacks (<a href="https://oc.to/sbc7WW">https://oc.to/sbc7WW</a>):</p>
+<p>Redgate offers this advice for database rollbacks (<a href="https://oc.to/sbc7WW">https://oc.to/sbc7WW</a>):</p>
 
 <p class="quote">Rather than investing time and energy into rollback planning, an alternative is to follow an approach
     that keeps you moving forward.</p>
@@ -524,7 +524,7 @@
 
 <p>Legislation such as the Cyber Resilience Act (CRA) and the requirements of the NIST “Software Supply Chain Security
     Guidance Under Executive Order (EO) 14028” (<a href="https://oc.to/T3b11u">https://oc.to/T3b11u</a>) may compel you
-    to produce Software Bill or
+    to produce Software Bill of
     Materials (SBOMs) to accompany your application, making the management of library dependencies a requirement of your
     CI/CD pipeline.</p>
 
@@ -648,23 +648,23 @@
         <td>Verifiable</td>
         <td>2</td>
         <td>Browser-based tests must be run in the staging environment and optionally in production as a debugging
-            tool
+            tool.
         </td>
     </tr>
     <tr>
         <td>Seamless</td>
         <td>2</td>
-        <td>Blue/green deployments in production</td>
+        <td>Blue/green deployments in production.</td>
     </tr>
     <tr>
         <td>Recoverable</td>
         <td>2</td>
-        <td>Rollbacks are performed by reverting traffic to the blue stack</td>
+        <td>Rollbacks are performed by reverting traffic to the blue stack.</td>
     </tr>
     <tr>
         <td>Visible</td>
         <td>2</td>
-        <td>Need to quickly find production versions of applications</td>
+        <td>Need to quickly find production versions of applications.</td>
     </tr>
     <tr>
         <td>Measurable</td>
@@ -674,19 +674,19 @@
     <tr>
         <td>Standardized</td>
         <td>4</td>
-        <td>Need golden paths for Kubernetes, Lambda, and VM deployments</td>
+        <td>Need golden paths for Kubernetes, Lambda, and VM deployments.</td>
     </tr>
     <tr>
         <td>Maintainable</td>
         <td>3</td>
-        <td>One-off scripts for common DB operations like regenerating indexes</td>
+        <td>One-off scripts for common DB operations like regenerating indexes.</td>
     </tr>
     <tr>
         <td>Maintainable</td>
         <td>3</td>
         <td>
-            <p>One-off scripts for common DB operations like regenerating indexes</p>
-            <p>Smoke test script to hit API, web page, and database login</p>
+            <p>One-off scripts for common DB operations like regenerating indexes.</p>
+            <p>Smoke test script to hit API, web page, and database login.</p>
         </td>
     </tr>
     <tr>
@@ -694,14 +694,14 @@
         <td>4</td>
         <td>
             <p>Production deployments are scheduled after hours.</p>
-            <p>Email report of deployment success or failure</p>
+            <p>Email report of deployment success or failure.</p>
         </td>
     </tr>
     <tr>
         <td>Auditable</td>
         <td>3</td>
         <td>
-            Must track changes to the deployment process and the deployments to support ISO 27001
+            Must track changes to the deployment process and the deployments to support ISO 27001.
         </td>
     </tr>
 </table>
