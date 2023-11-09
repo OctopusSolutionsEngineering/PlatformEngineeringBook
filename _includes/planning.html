@@ -165,7 +165,7 @@
     understand and implement the solution without requiring a personal demonstration every time. Documentation and
     training are two proven solutions for upskilling customers at a time and pace that suits them.</p>
 
-<p>Documentation quality is one of the DevOps capabilities noted by DORA (<a href="https://oc.to/6RM3FU">https://oc.to/6RM3FU</a>:</p>
+<p>Documentation quality is one of the DevOps capabilities noted by DORA (<a href="https://oc.to/6RM3FU">https://oc.to/6RM3FU</a>):</p>
 
 <blockquote>
     Internal documentation is a fundamental part of software development. Analysis by DORA has found a clear link
@@ -176,10 +176,11 @@
 <p>The table below highlights the lift to organizational performance achieved by teams with below-average and above-average
 documentation:</p>
 
+<p>
 <table>
     <tr>
         <td></td>
-        <td rowspan="2">Lift to organizational performance</td>
+        <td colspan="2">Lift to organizational performance</td>
     </tr>
     <tr>
         <td>
@@ -228,6 +229,7 @@ documentation:</p>
         <td>278%</td>
     </tr>
 </table>
+</p>
 
 <div><img class="icon" alt="Anecdotes Icon" src="images/anecdote.png"/></div>
 
@@ -351,6 +353,52 @@ documentation:</p>
     value. But offering a way to submit negative feedback provides platform teams the opportunity to quickly resolve, or
     at least understand, points of friction. Meanwhile, any positive feedback is marketing gold, regardless of the
     statistical significance.</p>
+
+<p>
+    There are other signals you can monitor in addition to surveys.
+</p>
+
+<h3>Documentation visits</h3>
+<p>
+    Tracking visits to your documentation may indicate the popularity of certain features of your IDP. Page visits
+    may also indicate yor customers are struggling with a certain feature and are relying on the documentation for
+    assistance. Either way, this information can help shape the discussions you have with your customers.
+</p>
+
+
+<h3>Market share</h3>
+<p>
+    Measuring your IDP artifact's market share highlights how many of your potential customers have implemented
+    the solutions provided by the platform team. How you track the deployment on an artifact will differ from one
+    platform to the next, but simple strategies can include:
+</p>
+
+<ul>
+    <li>Tagging resources created by an IDP artifact</li>
+    <li>Creating resources with recognizable naming conventions or descriptions</li>
+    <li>Using hooks or callbacks to record when a resource created by an IDP artifact is created or used</li>
+</ul>
+
+<h3>Key customer metrics</h3>
+<p>
+    Your customers, the developers, are also tracking their own success metrics. For example, they may use DORA metrics
+    or the SPACE framework. When talking with your customers, ask what measurements they care about and find ways to
+    track them. Demonstrating that your IDP enabled your customers to capture their own metrics is itself a powerful
+    metric.
+</p>
+
+<h3>Onboarding time</h3>
+<p>Your internal developer platform should shorten the time it takes to get a new developer’s first change into
+    Production. New developers should find it easier to start as the platform simplifies workflows and removes the need
+    to learn some underlying technologies.</p>
+
+<p>Spotify documented their approach to metrics in the post "How we measure Backstage success at Spotify"
+    (<a href="https://oc.to/Di3qdM">https://oc.to/Di3qdM</a>), noting that the "time-to-10th PR" is their north-star.</p>
+
+<p>You should also track the onboarding experience for teams adopting the platform. Opting in should be easy, and the
+    benefits should be quickly apparent. Developers don’t have weeks to invest in platform adoption, so you need to
+    make the onboarding process swift and easy. Building case studies with teams using the platform will help convince
+    others to consider it.</p>
 
 <h2>Example Checklist</h2>
 
