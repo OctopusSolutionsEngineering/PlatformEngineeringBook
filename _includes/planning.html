@@ -26,10 +26,10 @@
     product-focused engineering teams. The "State of DevOps Report Platform Engineering Edition 2023"
     (<a href="https://oc.to/7O5fqO">https://oc.to/7O5fqO</a>) notes that:</p>
 
-<p class="quote">At firms in which a platform team has existed for three or fewer years, 60% of respondents
+<blockquote><p>At firms in which a platform team has existed for three or fewer years, 60% of respondents
     identify a need for a
     product manager; at firms in which a platform team has existed for more than three years, this number rises to
-    74%.</p>
+    74%.</p></blockquote>
 
 <p>You can expect a successful platform engineering strategy to work closely with, or incorporate, other specialized
     roles
@@ -42,10 +42,10 @@
     support
     specialization:</p>
 
-<p class="quote">In highly-predictable environments, specialization allows you to solve problems very
+<blockquote><p>In highly-predictable environments, specialization allows you to solve problems very
     efficiently. In unpredictable
     environments, however, efficiency isn’t as important as creativity. And the environment of innovative startups is
-    anything but predictable.</p>
+    anything but predictable.</p></blockquote>
 
 <p>The flip side of bringing people into a platform team is to consider the option of secondments to embed members of
     the platform team back into the wider DevOps ecosystem as a method of sharing knowledge and experience.
@@ -54,9 +54,9 @@
     Team" (<a href="https://oc.to/a07RuP">https://oc.to/a07RuP</a>) that:
 </p>
 
-<p class="quote">One of the ways to solve [architectural and cultural issues] is to get secondments from the core
+<blockquote><p>One of the ways to solve [architectural and cultural issues] is to get secondments from the core
     platform team into that individual engineering team so that I can access some of the thinking behind what was
-    done [by the platform team].</p>
+    done [by the platform team].</p></blockquote>
 
 <p>The activities listed in this chapter support teams in the initial stages of their platform engineering journey. The
     aim is not to make the platform team experts in product management, marketing, technical writing, and training.
@@ -107,10 +107,10 @@
     notes in her presentation “How to build internal platforms for the enterprise” (<a href="https://oc.to/V0pDUd">https://oc.to/V0pDUd</a>)
     that:</p>
 
-<p class="quote">Just because you build a platform doesn't mean people are going to consume it.</p>
+<blockquote><p>Just because you build a platform doesn't mean people are going to consume it.</p></blockquote>
 
-<p class="quote">It has to solve a need, it has to be compelling, and you need to treat it like a
-    product.</p>
+<blockquote><p>It has to solve a need, it has to be compelling, and you need to treat it like a
+    product.</p></blockquote>
 
 <div><img class="icon" alt="Anecdotes Icon" src="images/anecdote.png"/></div>
 
@@ -131,16 +131,16 @@
 <p>The Forbes article “Why Most Salespeople Are Order Takers And Not Sellers” (<a href="https://oc.to/VmnpgR">https://oc.to/VmnpgR</a>)
     notes that:</p>
 
-<p class="quote">Selling is about change, and it's salespeople's job to influence that change. Salespeople
-    who can't influence change are simply order-takers.</p>
+<blockquote><p>Selling is about change, and it's salespeople's job to influence that change. Salespeople
+    who can't influence change are simply order-takers.</p></blockquote>
 
 <p>Gregor Hohpe similarly notes in his book “The Software Architect Elevator” that modern IT departments have moved
     beyond order taking:</p>
 
-<p class="quote">Positioning IT architecture on par with business architecture highlights, though, that the
+<blockquote><p>Positioning IT architecture on par with business architecture highlights, though, that the
     days when IT was a simple order-taker that provides a commodity resource at the lowest possible cost are (luckily)
     over. In the digital age, IT is a competitive differentiator and opportunity driver, not a commodity like
-    electricity.</p>
+    electricity.</p></blockquote>
 
 <p>You are uniquely positioned as a platform team member to understand the different viewpoints held by your DevOps
     teams, to share those insights with a broader audience, and sell a vision for how an DEaaS can influence positive
@@ -164,6 +164,72 @@
     individuals were to implement them within each team or project. This scale is only possible if DevOps teams can
     understand and implement the solution without requiring a personal demonstration every time. Documentation and
     training are two proven solutions for upskilling customers at a time and pace that suits them.</p>
+
+<p>Documentation quality is one of the DevOps capabilities noted by DORA (<a href="https://oc.to/6RM3FU">https://oc.to/6RM3FU</a>):
+</p>
+
+<blockquote><p>
+    Internal documentation is a fundamental part of software development. Analysis by DORA has found a clear link
+    between documentation quality and organizational performance — the organization’s ability to meet their performance
+    and profitability goals.
+</p></blockquote>
+
+<p>The table below highlights the lift to organizational performance achieved by teams with below-average and
+    above-average
+    documentation:</p>
+
+<table>
+    <tr>
+        <td></td>
+        <td colspan="2">Lift to organizational performance</td>
+    </tr>
+    <tr>
+        <td>
+            Technical Capability
+        </td>
+        <td>
+            Teams with below-average documentation quality
+        </td>
+        <td>
+            Teams with above-average documentation quality
+        </td>
+    </tr>
+    <tr>
+        <td>Continuous delivery</td>
+        <td>63%</td>
+        <td>656%</td>
+    </tr>
+    <tr>
+        <td>Continuous integration</td>
+        <td>34%</td>
+        <td>750%</td>
+    </tr>
+    <tr>
+        <td>Loosely coupled architecture</td>
+        <td>46%</td>
+        <td>313%</td>
+    </tr>
+    <tr>
+        <td>Site Reliability Engineering (SRE)</td>
+        <td>79%</td>
+        <td>343%</td>
+    </tr>
+    <tr>
+        <td>Supply chain security</td>
+        <td>37%</td>
+        <td>451%</td>
+    </tr>
+    <tr>
+        <td>Trunk based development</td>
+        <td>36%</td>
+        <td>1525%</td>
+    </tr>
+    <tr>
+        <td>Version control</td>
+        <td>27%</td>
+        <td>278%</td>
+    </tr>
+</table>
 
 <div><img class="icon" alt="Anecdotes Icon" src="images/anecdote.png"/></div>
 
@@ -245,48 +311,97 @@
     preallocated in a team’s calendar. Never underestimate how hard it is to find a time for everyone to meet. Being
     able to present at a lunch-and-learn is an incredible opportunity for your marketing efforts.</i></p>
 
-<h2>Feedback</h2>
+<h2>Feedback and metrics</h2>
 
-<p>Feedback from your customers is crucial to understanding whether you are meeting their expectations.</p>
+<p>Feedback from your customers is crucial to understand whether you are meeting their expectations and metrics
+    allow you to measure the impact of your IDP. Both require the platform team to have clear processes for collecting
+    data, with feedback generally being sourced directly from customers and metrics being directly measured from the
+    systems established by your IDP or the IDP itself.</p>
 
-<p>There are many examples of embedding feedback into processes, including:</p>
-<ol>
-    <li>Net Promoter Score (NPS)</li>
-    <li>Customer Satisfaction Score (CSAT)</li>
-    <li>Questionnaires</li>
-</ol>
+<p>The data collected falls into three categories:</p>
 
-<p>Remember, though, that high-quality feedback scores require an appropriate sample size. Unless many internal
-    customers use your IDP, you may not be able to passively source feedback from enough people to generate meaningful
-    scores.</p>
+<ul>
+    <li>IDP metrics to directly measure the characteristics of your IDP</li>
+    <li>Key customer metrics to measure the impact of your IDPs artifacts</li>
+    <li>Feedback from customers to gauge their perceived DevEx</li>
+</ul>
 
-<p>In the paper “Belief in the Law of Small Numbers”, Kahneman and Tversky define the Law of Small Numbers as the
-    mistaken belief that a small sample accurately reflects the probabilities of a population. With small sample sizes,
-    those few customers who felt like providing feedback may unduly influence how well you believe all customers
-    received your IDP.</p>
+<h3>IDP metrics</h3>
 
-<p>The effort spent encouraging your internal customers to supply asynchronous feedback may be better spent scheduling
-    user
-    interviews after releasing features or on a regular schedule. Compared to most product teams, you have the advantage
-    of working side by side with your customers, and it would be a missed opportunity not to take advantage of this.</p>
+<p>
+    IDP metrics are found by measuring the interactions with your IDP or the ongoing operation of resources generated
+    by your IDPs artifacts. Some examples of these metrics include:
+</p>
 
-<p>However, there is still value in offering a real-time feedback mechanism, if only to provide an outlet for frustrated
-    customers to signal their displeasure. Just as most product teams would prefer to receive such feedback directly
-    rather than second hand via channels like social media, platform teams benefit from the opportunity to resolve these
-    issues directly rather than hearing from the CTO that their IDP is not meeting expectations.</p>
+<ul>
+    <li>The number of IDP artifacts deployed</li>
+    <li>
+        How frequently the IDP artifacts are used. For example, how many times a IDP generated CI/CD pipeline is
+        run or how frequently a IDP generated dashboard is viewed.
+    </li>
+    <li>
+        The percentage of DevOps resources that are created by your IDP. This measures your IDPs market share. For
+        example, using tags to identify which cloud VMs were created by your IDP and how many were created by hand.
+    </li>
+</ul>
 
-<div><img class="icon" alt="Anecdotes Icon" src="images/anecdote.png"/></div>
+<h3>Key customer metrics</h3>
 
-<p><i>A common pattern I have noticed in many mobile apps is a two-step feedback process. The first question is designed
-    to gauge whether the customer would provide a positive or negative rating. Those that indicated they would provide a
-    negative rating are redirected to an internal feedback channel, while those providing positive feedback are
-    forwarded to the public app store.</i></p>
+<p>
+    Your IDPs artifacts can empower your customers to measure their own performance by exposing the ability to measure
+    key customer metrics.
+</p>
 
-<p>So while passive feedback methods like NPS and CSAT scores may not provide reliable metrics with small sample
-    sizes, it is still worth collecting this data. Conversations with customers are where you will find the actual
-    value. But offering a way to submit negative feedback provides platform teams the opportunity to quickly resolve, or
-    at least understand, points of friction. Meanwhile, any positive feedback is marketing gold, regardless of the
-    statistical significance.</p>
+<p>
+    The DORA metrics provide a well researched set of measurements that DevOps teams can use to measure their
+    performance.
+</p>
+
+<p>
+    Metrics that gauge the core DevEx dimensions are used to complement the perceived DevEx. The section
+    "What is DevEx?" noted the 3 core dimensions categorize the friction developers experience:
+</p>
+
+<ul>
+    <li>Feedback loops</li>
+    <li>Cognitive load</li>
+    <li>Flow state</li>
+</ul>
+
+<p>Some example metrics include:</p>
+
+<ul>
+    <li>Feedback loops: Build times, code review waits, deployment frequency, lead time for changes</li>
+    <li>Cognitive load: The number of manual stages in the deployment pipeline, lead time for technical questions</li>
+    <li>Flow: Meeting free blocks, incident frequency, number of unplanned tasks</li>
+</ul>
+
+<p>
+    You may also have other key performance indicators to measure the performance of DevOps teams. A common example
+    is onboarding time. Spotify documented their approach to metrics in the post "How we measure Backstage success at
+    Spotify" (<a href="https://oc.to/Di3qdM">https://oc.to/Di3qdM</a>), noting that the "time-to-10th PR" is their
+    north-star.
+</p>
+
+<h3>Perceived DevEx</h3>
+
+<p>
+    The final category of feedback involves surveying your customers to understand their perceived DevEx. Because your
+    customer's perceived DevEx is a subjective measurement, you must ask them directly how they feel
+    about the three core DevEx dimensions. Some questions include:
+</p>
+
+<ul>
+    <li>Feedback loops: How satisfied are you with (build times, test run speed, the time it takes to get a change
+        live)?
+    </li>
+    <li>Cognitive load: How complex is (the codebase, debugging the system, understanding the documentation)?</li>
+    <li>Flow: Are you able to (focus on work, avoid interruptions, understand your tasks)?</li>
+</ul>
+
+<p>
+    You may also include a Net Promoter Score (NPS) survey to track how your DevOps teams perceived by their members.
+</p>
 
 <h2>Example Checklist</h2>
 
@@ -395,10 +510,11 @@
             Feedback
         </td>
         <td>
-            <p>Provide thumbs up/down links at the end of each deployment.</p>
-
-            <p>Schedule calls with five users from each team 1 month after the initial release and every six months
-                after that.</p>
+            <p>Track market share by measuring the percentage of CI/CD pipelines that were created by the IDP.</p>
+            <p>Track the DORA metrics of any team using CI/CD pipelines generated by the IDP.</p>
+            <p>Survey DevOps teams about their perceived DevEx every quarter.</p>
+            <p>Include an NPS question in the survey to measure how likely DevOps team members would recommend a friend
+                for a job with this company.</p>
         </td>
     </tr>
 </table>

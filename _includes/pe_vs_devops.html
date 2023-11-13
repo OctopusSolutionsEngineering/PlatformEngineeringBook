@@ -35,13 +35,14 @@
 
 <p>There is no satisfying answer to that question.</p>
 
-<p>The term DevOps has become almost unfalsifiable, but this is quite by
-    design. DevOps has unashamedly sought to break down silos and absorb responsibilities that previously separated
+<p>Without a clear internal structure in DevOps teams, the term DevOps can easily become unfalsifiable. This
+    is a consequence of the DevOps movement's goals, which unashamedly sought to break down silos and absorb
+    responsibilities that previously separated
     teams creating and delivering technical solutions, while simultaneously building a culture of psychological safety
     to encourage creative problem-solving. The ideal DevOps team is self-sufficient, with the ability, willingness,
     confidence, and responsibility to tackle any and every problem.</p>
 
-<p>But for every ideal DevOps team thriving on the responsibility of owning their own destiny, there is another team
+<p>But for every ideal DevOps team thriving with their clearly defined responsibilities and efficient processes, there is another team
     slowly drowning under the constant need to resolve every brittle process and incorporate every new responsibility
     encountered in the DevOps lifecycle. The mental burden of this undifferentiated and unsatisfying work has come to
     define their existence, leading to a downward spiral of dispirited and low performing teams. Or, put more simply,
@@ -72,19 +73,139 @@
 <p><i>Fixing tests is arguably not the domain of platform engineering, as we'll see in the next section. But it is very
     much in the
     domain of DevOps. This example neatly highlights the dilemma faced by DevOps teams expected to take responsibility
-    for every
-    point of friction in their workflow. </i></p>
+    for every point of friction in their workflow. </i></p>
+
+<h2>What is DevEx?</h2>
+
+<p>The paper titled "DevEx: What Actually Drives Productivity" (<a href="https://oc.to/KHlp1Z">https://oc.to/KHlp1Z</a>)
+    provides this definition of DevEx:</p>
+
+<blockquote><p>Our framework distills developer experience to its three core dimensions: feedback loops, cognitive
+    load, and flow state. These dimensions emerged from real-world application of our prior
+    research, which identified 25 sociotechnical factors affecting DevEx. These three key dimensions crosscut those
+    25 factors, providing a practical model for understanding DevEx.</p></blockquote>
+
+<div><img alt="DevEx Core Dimensions" src="images/devex.png"/></div>
+
+<h3>Feedback loops</h3>
+
+<p>Software delivery involves many feedback loops:</p>
+
+<ul>
+    <li>Build and test times</li>
+    <li>Code review waits</li>
+    <li>Manual testing</li>
+    <li>Real user feedback</li>
+</ul>
+
+<p>Each of these loops needs to be short to reduce friction. Ideally, all feedback loops should complete while the
+    task is still active. If a task pauses during a feedback loop, it will interrupt the following work when it
+    restarts, disrupting flow state and increasing cognitive load.</p>
+
+<p>"DevEx: What Actually Drives Productivity" (<a href="https://oc.to/KHlp1Z">https://oc.to/KHlp1Z</a>) notes that:</p>
+
+<blockquote><p>Studies have consistently shown that organizations deploying more frequently and maintaining shorter lead
+    times are twice as likely to exceed performance goals as their competitors.</p></blockquote>
+
+<h3>Cognitive load</h3>
+
+<p>The tasks associated with the phases of the DevOps lifecycle involve large amount of mental processing. This
+    natural cognitive load for the task increases when developers have too many tools and technologies.</p>
+
+<p>You can reduce cognitive load if you:</p>
+
+<ol>
+    <li>Reduce toolchain friction</li>
+    <li>Keep documentation updated</li>
+    <li>Improve the system's architecture</li>
+    <li>Remove delays in the process</li>
+</ol>
+
+<h3>Flow state</h3>
+
+<p>You can probably remember when you last felt in the flow. You may have had a good chunk of uninterrupted time and
+    could focus on the problem. The problem seemed to resolve itself and you made great progress. You enjoyed the
+    work.</p>
+
+<p>Psychologist Mihaly Csikszentmihalyi studied the concept. He described it as a fully immersed feeling of energized
+    focus.</p>
+
+<p>Flow happens naturally when you have:</p>
+
+<ol>
+    <li>Control over your work structure</li>
+    <li>Clear goals</li>
+    <li>Engaging work</li>
+</ol>
+
+<p>It's not a case of making flow happen but preventing disruption from interruptions, delays, and context switching.</p>
+
+<p>"DevEx: What Actually Drives Productivity" notes that:</p>
+
+<blockquote><p>Frequent experiences of flow state at work lead to higher productivity, innovation, and employee
+    development. Similarly, studies have shown that developers who enjoy their work perform better and produce
+    higher-quality products.</p></blockquote>
+
+<p>You can make flow more likely by:</p>
+
+<ul>
+    <li>Using asynchronous communication to avoid interruptions</li>
+    <li>Clustering meetings to create large blocks of meeting-free time</li>
+    <li>Avoiding or reducing the impact of unplanned work</li>
+    <li>Batching questions</li>
+</ul>
+
+<h2>The impact of broken flow and high cognitive load</h2>
+
+<p>DevOps is all about bringing together the people required to deliver a technical solution to customers. The DevOps
+    lifecycle describes the various disciplines required to deliver technical solutions, but a common mistake made by
+    some DevOps managers is to assume that DevOps means no one should specialize and everyone should be able to
+    implement any phase in the DevOps lifecycle at any time.</p>
+
+<p>While there are no hard rules dictating which of the  DevOps lifecycle phases any given individual
+    will focus on, the reality is DevOps team members will have skills and interests that align with a subset of them.
+    For example:</p>
+
+<ul>
+    <li>Developers may prefer to focus on coding, building, and testing software</li>
+    <li>Those from an operations background may prefer to focus on building the platforms required to monitor and operate software</li>
+    <li>Product managers will likely focus on planning, testing, and releasing software</li>
+</ul>
+
+<p>Allowing DevOps team members to focus on a subset of the DevOps lifecycle provides them with the opportunity to enter
+    a state of flow and reduces the cognitive load incurred as a result of context switching.</p>
+
+<p>However, when the implementation of DevOps makes it unfalsifiable, it forces everyone to do everything all
+    the time. This kind of hyper-generalization may be necessary during the initial stages of a new DevOps team,
+    but when it is the norm in established DevOps teams, team members never have the opportunity to establish a state
+    of flow. Instead, they spend their time fighting one fire after another, often implementing the fastest and easiest
+    solution before switching focus. In addition, the DevOps landscape is now so complex that no one can be reasonably
+    expected to manage the cognitive load incurred by frequent and unplanned jumps to random phases in the DevOps
+    lifecycle. This denies DevOps team members the opportunity to truly engage with their work, resulting in poor
+    DevEx.</p>
 
 <h2>What is Platform Engineering?</h2>
 
 <p>If DevOps encapsulates literally everything that is required to deliver a technical product to a customer, then
-    platform engineering is the catalyst to initiate and facilitate DevOps processes. By delivering DevEx as a Service
-    through an IDP, platform teams improve the velocity of DevOps teams, increase the quality and consistency of their
-    work, remove points of friction that DevOps teams find so frustrating, and do so in a repeatable and scalable
-    manner.</p>
+    platform engineering is the catalyst to initiate and facilitate DevOps processes. By aligning itself with
+    established paradigms like IaaS, PaaS, and SaaS, DEaaS expresses the outcome of platform
+    engineering (improved DevEx) and its method of delivery (a self-service IDP) by:</p>
 
-<p>By aligning itself with established paradigms like IaaS, PaaS, and SaaS, DEaaS expresses the goal of platform
-    engineering (improved DevEx) and its method of delivery (a self-service IDP).</p>
+<ul>
+    <li>
+        Reducing the cognitive load required to participate in the DevOps lifecycle with tested processes and
+        proven platforms
+    </li>
+    <li>
+        Increasing the opportunities to enter a flow state but allowing DevOps team members to focus on the DevOps
+        lifecycle phases that align with their skills and interests
+    </li>
+    <li>
+        Improving feedback loops by ensuring DevOps teams use consistent processes, measure their own performance
+        with standardized monitoring, and continually optimizing processes with a shift-left mentality to identify
+        problems early
+    </li>
+</ul>
 
 <p>Describing platform engineering in terms of DEaaS also allows platform teams to identify whether their work
     contributes to the goal of platform engineering or if it is more aligned with the kind of Business as Usual (BAU)
@@ -92,10 +213,9 @@
     other tasks is whether the work can be used as the foundation for a new project or team.</p>
 
 <p>Consider that every major Operating System (OS) these days has the ability to host Virtual Machines (VMs). Does that
-    mean you have
-    implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires the ability to
-    provision a durable, accessible, supported, and monitored VM on demand, or at least with as little friction as
-    possible.</p>
+    mean you have implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires the
+    ability to provision a durable, accessible, supported, and monitored VM on demand, or at least with as little
+    friction as possible.</p>
 
 <p>In the same manner, if spinning up a new project or team involves recreating processes and infrastructure from memory
     or reverse engineering settings from existing code bases and established systems, you have not implemented platform
@@ -108,12 +228,21 @@
     implemented platform engineering. This one-to-many relationship between an IDP and the processes used by DevOps
     teams demonstrates that architectural decisions are centrally defined and can be implemented on demand.</p>
 
+<p>
+    In her talk <a href="https://oc.to/zLvWzD">Compliance standards should be modern development practices</a>,
+    Charity Majors, CTO of honeycomb.io, noted that:
+</p>
+
+<blockquote><p>
+    I feel like in this industry we tend to spend so much more time on individual performance than we do on fine-tuning
+    the sociotechnical system that we operate in, even though the systems that we're operating in have so much more of
+    an impact on how well you can do your job that your own knowledge of data structures and algorithms.
+</p></blockquote>
+
 <p>Consider a world where we had no notion of a CI server. DevOps teams still have the requirement to build and test
-    their
-    code, which would likely lead to situations where every developer built their code locally, nominated a
+    their code, which would likely lead to situations where every developer built their code locally, nominated a
     "builder" with the authority to produce golden artifacts, or maybe teams go a step further and implement a
-    rudimentary
-    centralized solution with cron jobs.
+    rudimentary centralized solution with cron jobs.
 </p>
 
 <p>Now imagine adding a second DevOps team. They, too, need a solution for building their code. There are five ways
@@ -129,9 +258,8 @@
 </ul>
 
 <p>It is easy to see that common solutions to common requirements are the only sustainable path for growing
-    DevOps teams. While the unfalsifiability of the responsibilities assigned to DevOps teams is still a concern, common
-    solutions to common requirements do reduce the scope of those responsibilities that DevOps teams must
-    actively focus on.
+    DevOps teams. They reduce the scope of responsibilities that DevOps teams must actively focus on, which directly
+    decreases cognitive load while also increasing the opportunity to enter a state of flow.
 </p>
 
 <p>In our hypothetical scenario, the obvious solution is to deploy a CI server. But CI servers had to start somewhere.
@@ -139,18 +267,19 @@
     (<a href="https://oc.to/kaK3ec">https://oc.to/kaK3ec</a>):
 </p>
 
-<p class="quote"> Kohsuke was a developer at Sun and got tired of incurring the wrath of his team every time
+<blockquote><p> Kohsuke was a developer at Sun and got tired of incurring the wrath of his team every time
     his code broke the build. He created Jenkins as a way to perform continuous integration – that is, to test
     his code before he did an actual commit to the repository, to be sure all was well. Once his teammates saw
-    what he was doing, they all wanted to use Jenkins.</p>
+    what he was doing, they all wanted to use Jenkins.</p></blockquote>
 
-<p>Thus a common solution to a common requirement was born. It is also no coincidence that Jenkins was born to improve
+<p>Thus, a common solution to a common requirement was born. It is also no coincidence that Jenkins was born to improve
     Kohsuke's DevEx.</p>
 
 <p>While CI servers are a solved problem (at least for most DevOps teams), environments with multiple DevOps teams
     working side by side will no doubt have many more common requirements. Addressing these common requirements with
     artifacts generated by your IDP is the goal of a platform team.
 </p>
+
 <p>
     Common artifacts generated by an IDP include:
 </p>
