@@ -1,11 +1,11 @@
 <h1><a id="pevsdevops">Platform Engineering versus DevOps</a></h1>
 
-<p>You can find many resources dedicated to DevOps, yet the concept can be very frustrating for those who have had to
+<p>You can find many resources dedicated to DevOps, yet the concept can be very frustrating for those who've had to
     apply
-    it meaningfully. To understand why DevOps has become so contentious, we will investigate it by exploring the
+    it meaningfully. To understand why DevOps has become so contentious, we'll investigate it by exploring the
     counterfactual "What is DevOps not?"</p>
 
-<h2>What is DevOps Not?</h2>
+<h2>What is DevOps not?</h2>
 
 <p>The image below depicts a common interpretation of the DevOps lifecycle:</p>
 
@@ -16,17 +16,24 @@
     build it, you run it."</p>
 
 <p>We then have measurements that gauge the performance of DevOps teams. The DORA Accelerate State of DevOps report has
-    five key metrics: deployment frequency, lead time for changes, change failure rate, time to restore service, and
-    reliability. These are referred to as the DORA metrics. The report also links organizational performance to the
+    5 key metrics:</p>
+    
+    <ol>
+    <li>Deployment frequency</li>
+    <li>Lead time for changes</li>
+    <li>Change failure rate</li>
+    <li>Time to restore service</li>
+    <li>Reliability</li>
+</ol>
+
+<p>We referred to these as the DORA metrics. The report also links organizational performance to the
     characteristics described by Westrum's organizational culture (<a
-            href="https://oc.to/r2TWX0">https://oc.to/r2TWX0</a>), where generative cultures high
+            href="https://oc.to/r2TWX0">https://oc.to/r2TWX0</a>). This is where generative cultures high
     in trust and low in blame exhibit higher performance.</p>
 
-<p>So the DevOps lifecycle makes DevOps teams responsible for tooling and processes, Westrum's organizational
-    cultures makes them responsible for all human interactions, and the DORA metrics makes them responsible for all
-    measurable outcomes.</p>
+<p>The DevOps lifecycle makes DevOps teams responsible for tooling and processes. Westrum's organizational culture makes them responsible for all human interactions. And the DORA metrics makes them responsible for all measurable outcomes.</p>
 
-<p>And these are just three of the more popular perspectives on DevOps. One of the great successes of the DevOps
+<p>And these are just 3 of the more popular perspectives on DevOps. One of the great successes of the DevOps
     movement is that it encourages new perspectives on the metrics, processes, ideals, and cultural underpinnings of the
     field.</p>
 
@@ -35,18 +42,12 @@
 
 <p>There is no satisfying answer to that question.</p>
 
-<p>Without a clear internal structure in DevOps teams, the term DevOps can easily become unfalsifiable. This
-    is a consequence of the DevOps movement's goals, which unashamedly sought to break down silos and absorb
-    responsibilities that previously separated
-    teams creating and delivering technical solutions, while simultaneously building a culture of psychological safety
-    to encourage creative problem-solving. The ideal DevOps team is self-sufficient, with the ability, willingness,
-    confidence, and responsibility to tackle any and every problem.</p>
+<p>Without a clear internal structure in DevOps teams, the term DevOps can easily become unfalsifiable. This is because of the DevOps movement's goals. It unashamedly tries to break down silos and absorb responsibilities that previously separated teams creating and delivering technical solutions. Simultaneously it tries to build a culture of psychological safety to encourage creative problem-solving. The ideal DevOps team is self-sufficient, with the ability, willingness, confidence, and responsibility to tackle any and every problem.</p>
 
-<p>But for every ideal DevOps team thriving with their clearly defined responsibilities and efficient processes, there
-    is another team
+<p>But for every ideal DevOps team thriving with their clearly defined responsibilities and efficient processes, there's another team
     slowly drowning under the constant need to resolve every brittle process and incorporate every new responsibility
     encountered in the DevOps lifecycle. The mental burden of this undifferentiated and unsatisfying work has come to
-    define their existence, leading to a downward spiral of dispirited and low performing teams. Or, put more simply,
+    define their existence, leading to a downward spiral of dispirited and low-performing teams. Or, put more simply,
     teams with an unsatisfactory developer experience.</p>
 
 <div><img class="icon" alt="Anecdotes Icon" src="images/anecdote.png"/></div>
@@ -61,7 +62,7 @@
     The suggestion proposed by the engineering leadership at the time was that everyone should stop what they were doing
     and fix the tests. This is typically sound advice and very much in line with practices like Test Driven Development
     (TDD). Unfortunately, every developer on the team intrinsically understood that fixing the tests was a dedicated
-    project it its own right. There were no quick wins.
+    project in its own right. There were no quick wins.
 </i></p>
 
 <p><i>
@@ -159,29 +160,29 @@
 
 <h2>The impact of broken flow and high cognitive load</h2>
 
-<p>DevOps is all about bringing together the people required to deliver a technical solution to customers. The DevOps
+<p>DevOps is all about bringing together the people needed to deliver a technical solution to customers. The DevOps
     lifecycle describes the various disciplines required to deliver technical solutions, but a common mistake made by
     some DevOps managers is to assume that DevOps means no one should specialize and everyone should be able to
     implement any phase in the DevOps lifecycle at any time.</p>
 
-<p>While there are no hard rules dictating which of the DevOps lifecycle phases any given individual
-    will focus on, the reality is DevOps team members will have skills and interests that align with a subset of them.
+<p>There are no hard rules dictating which of the DevOps lifecycle phases any given individual
+    will focus on. However, the reality is DevOps team members will have skills and interests that align with a subset of phases.
     For example:</p>
 
 <ul>
-    <li>Developers may prefer to focus on coding, building, and testing software</li>
-    <li>Those from an operations background may prefer to focus on building the platforms required to monitor and
+    <li>Developers may prefer coding, building, and testing software</li>
+    <li>Those from an operations background may prefer building the platforms needed to monitor and
         operate software
     </li>
     <li>Product managers will likely focus on planning, testing, and releasing software</li>
 </ul>
 
-<p>Allowing DevOps team members to focus on a subset of the DevOps lifecycle provides them with the opportunity to enter
-    a state of flow and reduces the cognitive load incurred as a result of context switching.</p>
+<p>Allowing DevOps team members to focus on a subset of the DevOps lifecycle gives them the opportunity to enter
+    a state of flow. It also reduces the cognitive load incurred as a result of context switching.</p>
 
 <p>However, when the implementation of DevOps makes it unfalsifiable, it forces everyone to do everything all
-    the time. This kind of hyper-generalization may be necessary during the initial stages of a new DevOps team,
-    but when it is the norm in established DevOps teams, team members never have the opportunity to establish a state
+    the time. This kind of hyper-generalization may be necessary during the initial stages of a new DevOps team.
+    But when it's the norm in established DevOps teams, team members never have the opportunity to establish a state
     of flow. Instead, they spend their time fighting one fire after another, often implementing the fastest and easiest
     solution before switching focus. In addition, the DevOps landscape is now so complex that no one can be reasonably
     expected to manage the cognitive load incurred by frequent and unplanned jumps to random phases in the DevOps
@@ -190,47 +191,37 @@
 
 <h2>What is Platform Engineering?</h2>
 
-<p>If DevOps encapsulates literally everything that is required to deliver a technical product to a customer, then
-    platform engineering is the catalyst to initiate and facilitate DevOps processes. By aligning itself with
-    established paradigms like IaaS, PaaS, and SaaS, DEaaS expresses the outcome of platform
-    engineering (improved DevEx) and its method of delivery (a self-service IDP) by:</p>
+<p>If DevOps encapsulates literally everything required to deliver a technical product to a customer, then
+    Platform Engineering is the catalyst to initiate and facilitate DevOps processes. By aligning itself with
+    established paradigms like IaaS, PaaS, and SaaS, DEaaS expresses the outcome of Platform
+    Engineering (improved DevEx) and its method of delivery (a self-service IDP) by:</p>
 
 <ul>
     <li>
-        Reducing the cognitive load required to participate in the DevOps lifecycle, with tested processes and
+        Reducing the cognitive load to participate in the DevOps lifecycle, with tested processes and
         proven platforms
     </li>
     <li>
-        Increasing the opportunities to enter a flow state by allowing DevOps team members to focus on the DevOps
+        Increasing the opportunities to enter a flow state by letting DevOps team members focus on the DevOps
         lifecycle phases that align with their skills and interests
     </li>
     <li>
         Improving feedback loops by ensuring DevOps teams use consistent processes, measure their own performance
-        with standardized monitoring, and continually optimizing processes with a shift-left mentality to identify
+        with standardized monitoring, and continually optimize processes with a shift-left mentality to identify
         problems early
     </li>
 </ul>
 
-<p>Describing platform engineering in terms of DEaaS also allows platform teams to identify whether their work
-    contributes to the goal of platform engineering or if it is more aligned with the kind of Business as Usual (BAU)
+<p>Describing Platform Engineering in terms of DEaaS also lets platform teams identify whether their work
+    contributes to the goal of platform engineering or if it's more aligned with the kind of business as usual (BAU)
     work often performed by DevOps teams. This avoids the unfalsifiability of DevOps. The difference between DEaaS and
     other tasks is whether the work can be used as the foundation for a new project or team.</p>
 
-<p>Consider that every major Operating System (OS) these days has the ability to host Virtual Machines (VMs). Does that
-    mean you have implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires the
-    ability to provision a durable, accessible, supported, and monitored VM on demand, or at least with as little
-    friction as possible.</p>
+<p>Consider that every major Operating System (OS) these days can host Virtual Machines (VMs). Does that mean you've implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires provisioning a durable, accessible, supported, and monitored VM on demand, or at least with as little friction as possible.</p>
 
-<p>In the same manner, if spinning up a new project or team involves recreating processes and infrastructure from memory
-    or reverse engineering settings from existing code bases and established systems, you have not implemented platform
-    engineering. This is true even if your work has been to improve DevEx by streamlining processes or refine the state
-    of established platforms, as the knowledge about what decisions were made, and why, is only held in the heads of a
-    few key members of the DevOps team.</p>
+<p>Likewise, if spinning up a new project or team involves recreating processes and infrastructure from memory or reverse engineering settings from existing code bases and established systems, you haven't implemented Platform Engineering. This is true even if your work has been to improve DevEx by streamlining processes or refining the state of established platforms. This is because the knowledge about what decisions were made and why is only in the heads of a few key members of the DevOps team.</p>
 
-<p>On the other hand, if you can leverage your IDP to spin up a new project or team, with confidence that best practices
-    and hard won business knowledge is baked into the foundation your IDP provides, then you have successfully
-    implemented platform engineering. This one-to-many relationship between an IDP and the processes used by DevOps
-    teams demonstrates that architectural decisions are centrally defined and can be implemented on demand.</p>
+<p>On the other hand, if you can use your IDP to spin up a new project or team, with confidence that best practices and hard-won business knowledge is baked into the foundation your IDP provides, then you have successfully implemented Platform Engineering. This one-to-many relationship between an IDP and the processes used by DevOps teams shows that architectural decisions are centrally defined and you can implement them on demand.</p>
 
 <p>
     In her talk "Compliance standards should be modern development practices" (<a href="https://oc.to/zLvWzD">https://oc.to/zLvWzD</a>),
@@ -243,13 +234,13 @@
     an impact on how well you can do your job than your own knowledge of data structures and algorithms.
 </p></blockquote>
 
-<p>Consider a world where we had no notion of a CI server. DevOps teams still have the requirement to build and test
-    their code, which would likely lead to situations where every developer built their code locally, nominated a
+<p>Consider a world where we had no notion of a CI server. DevOps teams still have to build and test
+    their code. This would likely lead to situations where every developer built their code locally, nominated a
     "builder" with the authority to produce golden artifacts, or maybe teams go a step further and implement a
     rudimentary centralized solution with cron jobs.
 </p>
 
-<p>Now imagine adding a second DevOps team. They, too, need a solution for building their code. There are five ways
+<p>Now imagine adding a second DevOps team. They, too, need a solution for building their code. There are 5 ways
     common requirements like this will be addressed:
 </p>
 
@@ -261,8 +252,8 @@
     <li>It will be addressed with a common solution</li>
 </ul>
 
-<p>It is easy to see that common solutions to common requirements are the only sustainable path for growing
-    DevOps teams. They reduce the scope of responsibilities that DevOps teams must actively focus on, which directly
+<p>It's easy to see that common solutions to common requirements are the only sustainable path for growing
+    DevOps teams. They reduce the scope of responsibilities that DevOps teams must actively focus on. This directly
     decreases cognitive load while also increasing the opportunity to enter a state of flow.
 </p>
 
@@ -276,11 +267,11 @@
     his code before he did an actual commit to the repository, to be sure all was well. Once his teammates saw
     what he was doing, they all wanted to use Jenkins.</p></blockquote>
 
-<p>Thus, a common solution to a common requirement was born. It is also no coincidence that Jenkins was born to improve
+<p>Thus, a common solution to a common requirement was born. It's also no coincidence that Jenkins was born to improve
     Kohsuke's DevEx.</p>
 
 <p>While CI servers are a solved problem (at least for most DevOps teams), environments with multiple DevOps teams
-    working side by side will no doubt have many more common requirements. Addressing these common requirements with
+    working side-by-side will no doubt have many more common requirements. Addressing these common requirements with
     artifacts generated by your IDP is the goal of a platform team.
 </p>
 
@@ -300,16 +291,16 @@
 
 <h2>Conclusion</h2>
 
-<p>DevOps is arguably the best philosophy we have to build high performing teams to deliver technical solutions. But
+<p>DevOps is arguably the best philosophy we have to build high-performing teams to deliver technical solutions. But
     while DevOps can be used as the foundation for great teams, the demands placed on them must be matched
     by their capability. Asking DevOps teams to provide their own unique implementation to every requirement leads to
     inconsistent solutions at best and eventually creates an unsustainable environment. This in turn leads to
     a loss of flow, high cognitive load, and slow feedback cycles - all signs of poor DevEx.</p>
 
-<p>Platform engineering is an acknowledgment that common problems are best addressed with common solutions, and that
+<p>Platform Engineering is an acknowledgment that common problems are best addressed with common solutions, and that
     solving common problems is one of the most effective methods for improving DevEx.</p>
 
 <p>By delivering DevEx as a Service, platform teams are responsible for an IDP that ensures architectural decisions,
-    best practices, and business knowledge is codified and able to be implemented at scale throughout DevOps teams. A
-    one-to-many relationship between an IDP and DevOps processes is a clear sign that you are doing platform engineering
+    best practices, and business knowledge are codified and can be implemented at scale throughout DevOps teams. A
+    one-to-many relationship between an IDP and DevOps processes is a clear sign that you are doing Platform Engineering
     right.</p>
