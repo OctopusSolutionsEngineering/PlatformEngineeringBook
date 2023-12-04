@@ -4,7 +4,7 @@
 <package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
  
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
-    <dc:title>DevEx as a Service with Platform Engineering</dc:title>
+    <dc:title>DevEx as a Service</dc:title>
     <dc:language>en</dc:language>
     <dc:identifier id="BookId" opf:scheme="ISBN">123456789X</dc:identifier>
     <dc:creator opf:file-as="Casperson, Matthew" opf:role="aut">Matthew Casperson</dc:creator>
