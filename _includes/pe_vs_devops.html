@@ -1,9 +1,15 @@
 <h1><a id="pevsdevops">Platform Engineering versus DevOps</a></h1>
 
+<p>DevOps and platform engineering are similar and complementary concepts. In fact, many DevOps teams will have
+    implemented aspects of platform engineering without necessarily thinking about it in those terms. But as DevOps
+    teams look to provide DEaaS to help them scale, it is helpful to understand the relationship between platform
+    engineering and DevOps.</p>
+
+<p>This first requires answering the seemingly innocuous question "What is DevOps?"</p>
+
 <p>You can find many resources dedicated to DevOps, yet the concept can be very frustrating for those who've had to
-    apply
-    it meaningfully. To understand why DevOps has become so contentious, we'll investigate it by exploring the
-    counterfactual "What is DevOps not?"</p>
+    apply it meaningfully. To understand why DevOps has become so contentious, we'll instead seek to understand it by
+    by exploring the counterfactual "What is DevOps not?"</p>
 
 <h2>What is DevOps not?</h2>
 
@@ -15,10 +21,10 @@
     The DevOps lifecycle is perhaps best summed up by a quote from Werner Vogels, Amazon's CTO, who said in 2006, "You
     build it, you run it."</p>
 
-<p>We then have measurements that gauge the performance of DevOps teams. The DORA Accelerate State of DevOps report (<a href="https://oc.to/u7njwG">https://oc.to/u7njwG</a>) has
-    5 key metrics:</p>
-    
-    <ol>
+<p>We then have measurements that gauge the performance of DevOps teams. The DORA Accelerate State of DevOps report (<a
+        href="https://oc.to/u7njwG">https://oc.to/u7njwG</a>) has 5 key metrics:</p>
+
+<ol>
     <li>Deployment frequency</li>
     <li>Lead time for changes</li>
     <li>Change failure rate</li>
@@ -27,9 +33,9 @@
 </ol>
 
 <p>We referred to these as the DORA metrics. The report also links organizational performance to the
-    characteristics described by Westrum's organizational culture (<a
-            href="https://oc.to/r2TWX0">https://oc.to/r2TWX0</a>). This is where generative cultures high
-    in trust and low in blame exhibit higher performance.</p>
+    characteristics described by Westrum's organizational culture
+    (<a href="https://oc.to/r2TWX0">https://oc.to/r2TWX0</a>). This is where generative cultures high in trust and
+    low in blame exhibit higher performance.</p>
 
 <p>
     This means:
@@ -50,9 +56,14 @@
 
 <p>There is no satisfying answer to that question.</p>
 
-<p>Without a clear internal structure in DevOps teams, the term DevOps can easily become unfalsifiable. This is because of the DevOps movement's goals. It unashamedly tries to break down silos and absorb responsibilities that previously separated teams creating and delivering technical solutions. Simultaneously it tries to build a culture of psychological safety to encourage creative problem-solving. The ideal DevOps team is self-sufficient, with the ability, willingness, confidence, and responsibility to tackle any and every problem.</p>
+<p>Without a clear internal structure in DevOps teams, the term DevOps can easily become unfalsifiable. This is because
+    of the DevOps movement's goals. It unashamedly tries to break down silos and absorb responsibilities that previously
+    separated teams creating and delivering technical solutions. Simultaneously it tries to build a culture of
+    psychological safety to encourage creative problem-solving. The ideal DevOps team is self-sufficient, with the
+    ability, willingness, confidence, and responsibility to tackle any and every problem.</p>
 
-<p>But for every ideal DevOps team thriving with their clearly defined responsibilities and efficient processes, there's another team
+<p>But for every ideal DevOps team thriving with their clearly defined responsibilities and efficient processes, there's
+    another team
     slowly drowning under the constant need to resolve every brittle process and incorporate every new responsibility
     encountered in the DevOps lifecycle. The mental burden of this undifferentiated and unsatisfying work has come to
     define their existence, leading to a downward spiral of dispirited and low-performing teams. Or, put more simply,
@@ -175,7 +186,8 @@
     implement any phase in the DevOps lifecycle at any time.</p>
 
 <p>There are no hard rules dictating which of the DevOps lifecycle phases any given individual
-    will focus on. However, the reality is DevOps team members will have skills and interests that align with a subset of phases.
+    will focus on. However, the reality is DevOps team members will have skills and interests that align with a subset
+    of phases.
     For example:</p>
 
 <ul>
@@ -227,11 +239,20 @@
     work often performed by DevOps teams. This avoids the unfalsifiability of DevOps. The difference between DEaaS and
     other tasks is whether the work can be used as the foundation for a new project or team.</p>
 
-<p>Consider that every major Operating System (OS) these days can host Virtual Machines (VMs). Does that mean you've implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires provisioning a durable, accessible, supported, and monitored VM on demand, or at least with as little friction as possible.</p>
+<p>Consider that every major Operating System (OS) these days can host Virtual Machines (VMs). Does that mean you've
+    implemented IaaS by giving every engineer a device with a modern OS? Of course not. IaaS requires provisioning a
+    durable, accessible, supported, and monitored VM on demand, or at least with as little friction as possible.</p>
 
-<p>Likewise, if spinning up a new project or team involves recreating processes and infrastructure from memory or reverse engineering settings from existing code bases and established systems, you haven't implemented Platform Engineering. This is true even if your work has been to improve DevEx by streamlining processes or refining the state of established platforms. This is because the knowledge about what decisions were made and why is only in the heads of a few key members of the DevOps team.</p>
+<p>Likewise, if spinning up a new project or team involves recreating processes and infrastructure from memory or
+    reverse engineering settings from existing code bases and established systems, you haven't implemented Platform
+    Engineering. This is true even if your work has been to improve DevEx by streamlining processes or refining the
+    state of established platforms. This is because the knowledge about what decisions were made and why is only in the
+    heads of a few key members of the DevOps team.</p>
 
-<p>On the other hand, if you can use your IDP to spin up a new project or team, with confidence that best practices and hard-won business knowledge is baked into the foundation your IDP provides, then you have successfully implemented Platform Engineering. This one-to-many relationship between an IDP and the processes used by DevOps teams shows that architectural decisions are centrally defined and you can implement them on demand.</p>
+<p>On the other hand, if you can use your IDP to spin up a new project or team, with confidence that best practices and
+    hard-won business knowledge is baked into the foundation your IDP provides, then you have successfully implemented
+    Platform Engineering. This one-to-many relationship between an IDP and the processes used by DevOps teams shows that
+    architectural decisions are centrally defined and you can implement them on demand.</p>
 
 <p>
     In her talk "Compliance standards should be modern development practices" (<a href="https://oc.to/zLvWzD">https://oc.to/zLvWzD</a>),
