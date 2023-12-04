@@ -22,6 +22,7 @@ jobs:
       env:
         VERSION: 0.1.${{ github.run_number }}
       run: |-
+        sudo apt-get update
         sudo apt-get install -y ruby-full build-essential zlib1g-dev python2 dos2unix libegl1 libopengl0 epubcheck
         echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
         echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
