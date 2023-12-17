@@ -45,10 +45,11 @@
     <li>DevOps teams are already familiar with them</li>
 </ul>
 
-<p>The chapter "Planning your Internal Developer Platform" recommends clearly defining your IDP's mission. This ensures the focus of the platform team is on a specific, achievable outcome. This mission statement has 2 parts:</p>
+<p>As we'll see in the chapter "Planning your Internal Developer Platform", clearly defining your IDP's mission ensures
+    the platform team is focused on a specific, achievable outcome. This mission statement has 2 parts:</p>
 <ul>
     <li>Non-functional requirements providing a high-level description of the outcome</li>
-     <li>Functional requirements that describe how the feature works</li>
+    <li>Functional requirements that describe how the feature works</li>
 </ul>
 
 
@@ -65,7 +66,9 @@
 <p>Software teams are deploying software to production more frequently than ever. They also make deployments to
     pre-production environments as part of their deployment pipeline.</p>
 
-<p>To be confident when you change software at high velocity, you need a mix of methods to confirm the release-ability of your software. These methods include test automation, exploratory testing, self-beta testing (drinking your own champagne), and other techniques.</p>
+<p>To be confident when you change software at high velocity, you need a mix of methods to confirm the release-ability
+    of your software. These methods include test automation, exploratory testing, self-beta testing (drinking your own
+    champagne), and other techniques.</p>
 
 <p>These techniques are only helpful if what you deploy to production is the same as what you deploy to your other
     environments.</p>
@@ -80,10 +83,12 @@
 
 <h4>Deployment pipelines</h4>
 
-<p>A deployment pipeline starts when you commit code to a source code repository. And it follows the change all the way to the production environment.</p>
+<p>A deployment pipeline starts when you commit code to a source code repository. And it follows the change all the way
+    to the production environment.</p>
 
-<p>Every activity to progress the change is part of your deployment pipeline. Whether manual or automated, this includes:</p>
-    
+<p>Every activity to progress the change is part of your deployment pipeline. Whether manual or automated, this
+    includes:</p>
+
 <ul>
     <li>Code reviews</li>
     <li>Builds</li>
@@ -114,14 +119,20 @@
 
 <h4>Continuous Deployment</h4>
 
-<p>Continuous Deployment takes CI/CD a step further. It removes all manual intervention to create a fully automated commit-to-consumer workflow. The deployment pipeline automatically rejects a bad application version and deploys all good versions to production without manual approvals.</p>
+<p>Continuous Deployment takes CI/CD a step further. It removes all manual intervention to create a fully automated
+    commit-to-consumer workflow. The deployment pipeline automatically rejects a bad application version and deploys all
+    good versions to production without manual approvals.</p>
 
 <h4>CI/CD</h4>
 <p>CI/CD refers to the combination of Continuous Integration with Continuous Delivery or Continuous Deployment.</p>
 
-<p>Teams commonly deploy to the development environment without manual intervention but let people control when they deploy to subsequent environments. We've learned from most of our customers that this approach <i>works well for them.</i></p>
+<p>Teams commonly deploy to the development environment without manual intervention but let people control when they
+    deploy to subsequent environments. We've learned from most of our customers that this approach <i>works well for
+        them.</i></p>
 
-<p>In the test environment, quality assurance (QA) staff validate changes, product owners review new functionality, security teams probe for vulnerabilities, etc. When everyone is happy that the changes meet their requirements, they can promote the application version to production.</p>
+<p>In the test environment, quality assurance (QA) staff validate changes, product owners review new functionality,
+    security teams probe for vulnerabilities, etc. When everyone is happy that the changes meet their requirements, they
+    can promote the application version to production.</p>
 
 <p>The production environment is the final destination. It's where end users can use the application.</p>
 
@@ -186,7 +197,9 @@
     <li>Inline scripts that support the deployment and configuration of the application and infrastructure</li>
 </ol>
 
-<p>These are combined into a <i>release</i>, which captures the current deployment state. The release snapshot ensures you use the same snapshot for the release, even if you change the process, variables, or scripts during environment progression.</p>
+<p>These are combined into a <i>release</i>, which captures the current deployment state. The release snapshot ensures
+    you use the same snapshot for the release, even if you change the process, variables, or scripts during environment
+    progression.</p>
 
 <p>Without a release snapshot, you could deploy a tested application version using an untested deployment process,
     resulting in a problem in your production environment.</p>
@@ -201,7 +214,9 @@
 
 <h3>General testing concepts</h3>
 
-<p>Testing is a nebulous term with often ill-defined subcategories. We won't attempt to provide authoritative definitions of testing categories here. We aim to offer a high-level description of common testing practices and highlight those you can use when you deploy.</p>
+<p>Testing is a nebulous term with often ill-defined subcategories. We won't attempt to provide authoritative
+    definitions of testing categories here. We aim to offer a high-level description of common testing practices and
+    highlight those you can use when you deploy.</p>
 
 <h4>What don't we test during deployments?</h4>
 
@@ -212,11 +227,13 @@
     you might use a test double instead of a real component to improve reliability. Otherwise, you might spin up the
     dependencies as part of the test.</p>
 
-<p>The tests run by the build server should result in you publishing a high-quality application package. Bad application versions should get prevented from progressing.</p>
+<p>The tests run by the build server should result in you publishing a high-quality application package. Bad application
+    versions should get prevented from progressing.</p>
 
 <h4>What can we test during deployment?</h4>
 
-<p>Tests that need a live application or application stack to be accessible are ideal candidates to run as part of a deployment process.</p>
+<p>Tests that need a live application or application stack to be accessible are ideal candidates to run as part of a
+    deployment process.</p>
 
 <p>Smoke tests are quick tests designed to ensure you deploy applications and services correctly. Smoke tests implement
     the minimum interaction to ensure services respond correctly. Some examples include:</p>
@@ -242,7 +259,7 @@
     long-running
     tests following paths through the application that require most or all application stack components to work
     correctly. Examples include:</p>
-    
+
 <ul>
     <li>
         Automating the interaction with an online store to browse a catalog, view an item, add it to a cart, complete
@@ -254,9 +271,15 @@
     </li>
 </ul>
 
-<p>Chaos testing involves deliberately removing or interfering with the components that make up an application. This validates that the system is resilient enough to withstand such failures. You can combine chaos testing with other tests to verify the stability of a degraded system.</p>
+<p>Chaos testing involves deliberately removing or interfering with the components that make up an application. This
+    validates that the system is resilient enough to withstand such failures. You can combine chaos testing with other
+    tests to verify the stability of a degraded system.</p>
 
-<p>Usability and acceptance testing often involve a human using the application to verify that it meets the requirements. The requirements can be subjective, for example, determining if the application is visually appealing. Or the testers may be non-technical and don't have the option of automating tests. The manual and subjective nature of these tests makes them difficult, if not impossible, to automate. This means you must deploy a working copy of the application or application stack and make it accessible to testers.</p>
+<p>Usability and acceptance testing often involve a human using the application to verify that it meets the
+    requirements. The requirements can be subjective, for example, determining if the application is visually appealing.
+    Or the testers may be non-technical and don't have the option of automating tests. The manual and subjective nature
+    of these tests makes them difficult, if not impossible, to automate. This means you must deploy a working copy of
+    the application or application stack and make it accessible to testers.</p>
 
 <h2>Pillar 3. Seamless deployments</h2>
 
@@ -275,7 +298,9 @@
 
 <p>No discussion on seamless deployments can begin without first addressing the issue of database updates.</p>
 
-<p>A fundamental aspect of most seamless deployment strategies involves running 2 versions of your application side-by-side, if only for a short time. If 2 versions of the application access the same database, all updates to the
+<p>A fundamental aspect of most seamless deployment strategies involves running 2 versions of your application
+    side-by-side, if only for a short time. If 2 versions of the application access the same database, all updates to
+    the
     database schema and data must be compatible with both versions. We refer to this as backward and forward
     compatibility.</p>
 
@@ -290,9 +315,9 @@
 <p>Seamless deployments involving a database require:</p>
 
 <ul>
-<li>Careful planning</li>
-<li>Many small steps to roll out the changes</li>
-<li>Tight coordination between the database and application code</li>
+    <li>Careful planning</li>
+    <li>Many small steps to roll out the changes</li>
+    <li>Tight coordination between the database and application code</li>
 </ul>
 
 <p>You can find more database techniques in Refactoring Databases (<a
@@ -322,14 +347,17 @@
 <p>The rolling update strategy involves incrementally updating instances of the current deployment with the new
     deployment. This strategy ensures at least one application instance is always available during the rollout.</p>
 
-<p>Your load balancer will send users to instances with its usual balancing pattern. As the rollout progresses, more users will move onto the new application version. You can also take each instance out of balance before you update it, so requests aren't dropped during the deployment.</p>
+<p>Your load balancer will send users to instances with its usual balancing pattern. As the rollout progresses, more
+    users will move onto the new application version. You can also take each instance out of balance before you update
+    it, so requests aren't dropped during the deployment.</p>
 
 <p>With rolling updates, your database will need to maintain backward and forward compatibility, as during the rollout
     it will receive connections from both the old and new application versions.</p>
 
 <h4>Canary deployments</h4>
 
-<p>The canary deployment strategy is similar to the rolling update strategy. Both incrementally expose more end users to the new deployment over time.</p>
+<p>The canary deployment strategy is similar to the rolling update strategy. Both incrementally expose more end users to
+    the new deployment over time.</p>
 
 <p>With canary deployments, you create a small group of users who get new versions before everyone else. This group may
     contain users who opt-in to get early access, represent a segment of your business (such as free-tier users), or be
@@ -343,12 +371,17 @@
     in the sample group.</p>
 
 <h4>Blue/green deployments</h4>
-<p>The blue/green strategy involves deploying the new version (the green version) alongside the current version (the blue version) without exposing the green version to any traffic. After you deploy and verify the green version, traffic is cutover from the blue to the green version. When the green version handles all traffic, you can remove the blue version.</p>
+<p>The blue/green strategy involves deploying the new version (the green version) alongside the current version (the
+    blue version) without exposing the green version to any traffic. After you deploy and verify the green version,
+    traffic is cutover from the blue to the green version. When the green version handles all traffic, you can remove
+    the blue version.</p>
 
 <p>Any database changes deployed by the green version must maintain backward and forward compatibility. Even when the
     green version is not serving traffic, the blue version gets exposed to database changes.</p>
 
-<p>This deployment strategy requires additional infrastructure during the deployment process. But you can create and destroy this infrastructure automatically, or use it as a cold standby, depending on your needs and cost constraints.</p>
+<p>This deployment strategy requires additional infrastructure during the deployment process. But you can create and
+    destroy this infrastructure automatically, or use it as a cold standby, depending on your needs and cost
+    constraints.</p>
 
 <h4>Session-draining</h4>
 
@@ -369,11 +402,13 @@
 <p>The feature flag strategy involves building functionality into a new application version and using a toggle or
     feature flag to control its visibility. This lets you control feature visibility without needing a deployment.</p>
 
-<p>In practice, you deploy a new application version with flaggable features with one of the strategies above, so the feature flag strategy complements those other strategies.</p>
+<p>In practice, you deploy a new application version with flaggable features with one of the strategies above, so the
+    feature flag strategy complements those other strategies.</p>
 
 <h4>Feature branch</h4>
 
-<p>The feature branch strategy lets developers deploy an application version with changes they're working on. It's usually deployed in a non-production environment alongside the main deployment.</p>
+<p>The feature branch strategy lets developers deploy an application version with changes they're working on. It's
+    usually deployed in a non-production environment alongside the main deployment.</p>
 
 <p>Maintaining database backward and forward compatibility may not be necessary with feature branch deployments. Because
     feature branches are short-lived for testing, it's acceptable that each deployment has access to an isolated test
@@ -387,8 +422,8 @@
 <p>Recovering from an undesirable deployment means choosing whether to:</p>
 
 <ul>
-<li>Roll back to a previous good application version</li>
-<li>Roll forward to a new version that returns the environment to a desirable state</li>
+    <li>Roll back to a previous good application version</li>
+    <li>Roll forward to a new version that returns the environment to a desirable state</li>
 </ul>
 
 <p>Either solution works with stateless applications, but you must treat rollbacks with care when there's a database
@@ -413,11 +448,14 @@
     More often than not, the effort to successfully rollback a deployment far exceeds the effort it would take to push a
     fix to production.</p></blockquote>
 
-<p>When deployments involve database changes, we recommend rolling forward to recover from an undesirable deployment.</p>
+<p>When deployments involve database changes, we recommend rolling forward to recover from an undesirable
+    deployment.</p>
 
 <h3>Rolling back</h3>
 
-<p>If you achieved the pillar of <i>repeatable deployments</i>, you can roll back by re-running a previous deployment. This is possible because the package versions, scripts, and variables are all captured by a repeatable deployment.</p>
+<p>If you achieved the pillar of <i>repeatable deployments</i>, you can roll back by re-running a previous deployment.
+    This is possible because the package versions, scripts, and variables are all captured by a repeatable deployment.
+</p>
 
 <p>Rollbacks are also an explicit feature of several seamless deployment strategies:</p>
 
@@ -470,7 +508,9 @@
 <p>Rolling forward has the following disadvantages:</p>
 <ul>
     <li>Rolling forward typically requires a developer to implement a fix to include in the next deployment.</li>
-    <li>You must have a short lead time for changes. Otherwise, it's tempting to skip environments to expedite the fix.</li>
+    <li>You must have a short lead time for changes. Otherwise, it's tempting to skip environments to expedite the
+        fix.
+    </li>
     <li>The production environment will be left in an undesirable state for as long as it takes to develop and deploy
         the next version.
     </li>
@@ -478,7 +518,9 @@
 
 <h2>Pillar 5. Visible deployments</h2>
 
-<p>It can be challenging to track which application version you deployed to each environment. You shouldn't have to review the files on the disk or the structure and data in the database. This is like trying to work out what mix of colors produced a tin of paint.</p>
+<p>It can be challenging to track which application version you deployed to each environment. You shouldn't have to
+    review the files on the disk or the structure and data in the database. This is like trying to work out what mix of
+    colors produced a tin of paint.</p>
 
 <p>Having a view of environments and application versions is crucial to understanding:</p>
 <ul>
@@ -498,7 +540,8 @@
 
 <h3>Issue tracking</h3>
 
-<p>Often, you make source code commits to resolve an issue documented in a dedicated issue tracker. These issues provide a space for you to describe, discuss, and track bugs. A unique identifier references each issue.</p>
+<p>Often, you make source code commits to resolve an issue documented in a dedicated issue tracker. These issues provide
+    a space for you to describe, discuss, and track bugs. A unique identifier references each issue.</p>
 
 <p>Capturing the issue IDs related to changes in a package version and any deployment that includes that package version
     provides insight into the issues resolved in any deployment.</p>
@@ -533,14 +576,17 @@
 <p>A release version captures a snapshot of the above information, along with the deployment process, package versions,
     variable values, and scripts. You deploy this release version to each environment.</p>
 
-<p>Displaying which release versions you deployed to each environment provides a high-level view of the state of your deployments. With this information, anyone can see what's deployed where. By drilling into the details of a release, you can see the commit messages, issues, dependencies, and links to the CI builds.</p>
+<p>Displaying which release versions you deployed to each environment provides a high-level view of the state of your
+    deployments. With this information, anyone can see what's deployed where. By drilling into the details of a release,
+    you can see the commit messages, issues, dependencies, and links to the CI builds.</p>
 
 <h2>Pillar 6. Measurable deployments</h2>
 
 <p>The deployment pipeline's primary goal is getting your software into your customers' hands. To understand how well
     your deployment pipeline is performing, you need to measure the metrics that define success for you.</p>
 
-<p>You first need to define useful metrics, then reliably collect them, and surface them in an easy-to-understand format.</p>
+<p>You first need to define useful metrics, then reliably collect them, and surface them in an easy-to-understand
+    format.</p>
 
 <p>Some metrics you can use to track deployments are:</p>
 
@@ -555,7 +601,8 @@
 
 <h2>Pillar 7. Auditable deployments</h2>
 
-<p>If the visible deployments pillar is about surfacing the current state of your environments and the changes made as part of the release, then auditing is about tracking people's involvement in the deployment process over time.</p>
+<p>If the visible deployments pillar is about surfacing the current state of your environments and the changes made as
+    part of the release, then auditing is about tracking people's involvement in the deployment process over time.</p>
 
 <p>Auditing lets teams see a history of all deployment activity, like:</p>
 <ul>
@@ -568,12 +615,12 @@
 
 <p>For audit events to be helpful, they must be searchable, filterable, and exportable to support reporting and
     analysis.</p>
-    
+
 <h2>Pillar 8. Standardized deployments</h2>
 
 <p>Just as repeatable deployments build confidence as you promote a release across environments, standardizing
     deployment processes across different projects allows teams to confidently use proven solutions.</p>
-    
+
 <p>Your IDP is an ideal solution for standardizing deployment processes across DevOps teams. Much of what we have
     discussed in this book directly applies to planning, creating, and maintaining standardized deployment
     processes.</p>
@@ -581,35 +628,39 @@
     functionality that platform teams are responsible for delivering. In this case, your IDP is responsible for
     providing the pillar of standardized deployment pipelines, and the pipelines will then embed other appropriate
     pillars.</p>
-    
+
 <h2>Pillar 9. Maintainable deployments</h2>
 
-<p>Getting your deployments to the production environment is just the beginning. There are day-to-day operations tasks that keep your applications running and your customers happy. These include:</p>
+<p>Getting your deployments to the production environment is just the beginning. There are day-to-day operations tasks
+    that keep your applications running and your customers happy. These include:</p>
 
 <ul>
-	<li>Diagnosing issues</li>
-	<li>Collecting logs</li>
-	<li>Performing backups</li>
-	<li>Restarting services</li>
-	<li>Rotating keys</li>
-	<li>Testing connections</li>
+    <li>Diagnosing issues</li>
+    <li>Collecting logs</li>
+    <li>Performing backups</li>
+    <li>Restarting services</li>
+    <li>Rotating keys</li>
+    <li>Testing connections</li>
 </ul>
 
-<p>While you could SSH or RDP into a server and start poking around, each change causes your environment configuration to drift, making it harder to implement repeatable deployments. It's also difficult to track changes, verify that they worked, and audit who changed what.</p>
+<p>While you could SSH or RDP into a server and start poking around, each change causes your environment configuration
+    to drift, making it harder to implement repeatable deployments. It's also difficult to track changes, verify that
+    they worked, and audit who changed what.</p>
 
 <p>Just like deployments, maintenance tasks should be:</p>
 
 <ul>
-	<li>Repeatable</li>
-	<li>Verifiable</li>
-	<li>Visible</li>
-	<li>Measurable</li>
-	<li>Auditable</li>
-	<li>Standardized</li>
-	<li>Coordinated</li>
+    <li>Repeatable</li>
+    <li>Verifiable</li>
+    <li>Visible</li>
+    <li>Measurable</li>
+    <li>Auditable</li>
+    <li>Standardized</li>
+    <li>Coordinated</li>
 </ul>
 
-<p>Maintenance tasks represent the business knowledge needed to keep your deployments running and should meet the same standards as your deployment processes.</p>
+<p>Maintenance tasks represent the business knowledge needed to keep your deployments running and should meet the same
+    standards as your deployment processes.</p>
 
 <h2>Pillar 10. Coordinated deployments</h2>
 <p>Deploying a package to an environment is one small part of the deployment process. Often, you need to coordinate
@@ -624,7 +675,9 @@
     <li>External events can trigger deployments</li>
     <li>Deployments can trigger external events</li>
 </ul>
-<p>A deployment process may be a single component in the broader ecosystem of business process management tools. Orchestrating deployments from third-party platforms and reporting results back lets teams manage complex deployments as part of a broader business process.</p>
+<p>A deployment process may be a single component in the broader ecosystem of business process management tools.
+    Orchestrating deployments from third-party platforms and reporting results back lets teams manage complex
+    deployments as part of a broader business process.</p>
 
 <h2>Example checklist: Capturing functional and non-functional requirements</h2>
 <p>This example checklist provides a table for the platform team to note how to implement the pillars with functional
@@ -710,7 +763,8 @@
 
 <h2>Conclusion</h2>
 <p>Many IT departments have fallen into the trap of being order-takers, dutifully asking how high when asked to jump. As
-    a platform team member, you have a unique opportunity to move beyond order taking. You can lead discussions regarding best
+    a platform team member, you have a unique opportunity to move beyond order taking. You can lead discussions
+    regarding best
     practices and the future vision of your DevOps teams.</p>
 
 <p>The 10 pillars in this chapter provide a set of non-functional requirements relating to CI/CD. These pillars are
