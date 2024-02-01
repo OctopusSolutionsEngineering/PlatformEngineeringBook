@@ -10,7 +10,7 @@
     <dc:creator opf:file-as="Casperson, Matthew" opf:role="aut">Matthew Casperson</dc:creator>
     <dc:publisher>Amazon.com</dc:publisher>
     <dc:subject>Reference</dc:subject>
-    <dc:date>2023-10-01</dc:date>
+    <dc:date>2024-02-02</dc:date>
     <dc:description>An introduction to DevEx as a Service and how it is implemented using Platform Engineering</dc:description>
     {{ site.coverImage }}  
   </metadata>
