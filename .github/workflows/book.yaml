@@ -41,7 +41,8 @@ jobs:
       run: sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo --preserve-env=CALIBRE_INSTALLER_LOCAL_URL sh /dev/stdin version=6.13.0
       env:
         CALIBRE_INSTALLER_LOCAL_URL: https://octopus-sales-engineering.s3.ap-southeast-2.amazonaws.com/calibre-6.13.0-x86_64.txz
-    
+
+    # Letter size is 816px x 1056px, but we double the cover image because kindle recommends larger images
     - name: Convert to PDF
       if: github.event_name != 'pull_request'
       run: |
@@ -52,6 +53,7 @@ jobs:
         --pdf-serif-family 'Helvetica' \
         --pdf-default-font-size 12 \
         --pdf-mono-font-size 12 \
+        --paper-size letter \
         --cover 'pdf-cover.png'
 
     - name: Create Release
