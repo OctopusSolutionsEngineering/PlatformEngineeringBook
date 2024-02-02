@@ -51,6 +51,10 @@ th, td {
     padding: 4px;
 }
 
+th {
+    word-break: normal;
+}
+
 .wrapPre {
     white-space: pre-wrap;
 }
