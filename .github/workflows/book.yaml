@@ -14,13 +14,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: '0'
+
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.10.2
+      with:
+        versionSpec: 5.x
+
+    - id: determine_version
+      name: Determine Version
+      uses: gittools/actions/gitversion/execute@v0.10.2
+      with:
+        additionalArguments: /overrideconfig mode=Mainline
 
     - uses: nelonoel/branch-name@v1.0.1
 
     - name: Build book
       env:
-        VERSION: 0.1.${{ github.run_number }}
+        VERSION: ${{ steps.determine_version.outputs.semVer }}
       run: |-
         sudo apt-get update
         sudo apt-get install -y ruby-full build-essential zlib1g-dev python2 dos2unix libegl1 libopengl0 epubcheck
@@ -63,8 +76,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: 0.1.${{ github.run_number }}-${{ env.BRANCH_NAME }}
-        release_name: Release 0.1.${{ github.run_number }}-${{ env.BRANCH_NAME }}
+        tag_name: ${{ steps.determine_version.outputs.semVer }}+run${{ github.run_number }}-attempt${{ github.run_attempt }}
+        release_name: Release ${{ steps.determine_version.outputs.semVer }} Run ${{ github.run_number }} Attempt ${{ github.run_attempt }}
         draft: github.ref != 'refs/heads/main'
         prerelease: github.ref != 'refs/heads/main'
 
