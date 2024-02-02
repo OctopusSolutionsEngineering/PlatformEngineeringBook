@@ -5,6 +5,6 @@ exclude:
 imageWidth: 1600px
 imageHeight: 900px
 coverImage:
-responsibilityModelImage: >
+responsibilityModelImage: |
   height: 2121px;
   width: 774px;

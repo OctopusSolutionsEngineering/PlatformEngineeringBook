@@ -96,5 +96,5 @@ h2, h3 {
 }
 
 .responsibility-model-image {
-{{ site.responsibilityModelImage }};
+{{ site.responsibilityModelImage }}
 }
