@@ -120,7 +120,7 @@ jobs:
     - name: Build printable EPUB
       if: github.event_name != 'pull_request'
       env:
-        VERSION: 0.1.${{ github.run_number }}
+        VERSION: ${{ steps.determine_version.outputs.semVer }}
       run: |-
         cd scripts
         dos2unix create-epub-kdp.sh
