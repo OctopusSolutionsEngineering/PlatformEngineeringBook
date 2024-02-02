@@ -8,3 +8,5 @@ responsibilityModelImage:
 devExImage:
 responsibilityTriadImage:
 devopsImage:
+tocParent: ol
+tocChild: li

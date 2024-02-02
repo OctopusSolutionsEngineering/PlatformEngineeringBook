@@ -20,3 +20,7 @@ radarChartImage: |
 devopsImage: |
   width: 1000px;
   height: 503px;
+# The TOC for kindles needs to be a list of paragraphs
+# https://ebooks.stackexchange.com/a/7989
+tocParent: div
+tocChild: p
