@@ -51,6 +51,7 @@ th, td {
     padding: 4px;
 }
 
+/* Epubs were breaking words in table headers, so this stops it. */
 th {
     word-break: normal;
 }
