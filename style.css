@@ -98,3 +98,19 @@ h2, h3 {
 .responsibility-model-image {
 {{ site.responsibilityModelImage }}
 }
+
+.dev-ex-image {
+{{ site.devExImage }}
+}
+
+.responsibility-triad-image {
+{{ site.responsibilityTriadImage }}
+}
+
+.radar-chart-image {
+{{ site.radarChartImage }}
+}
+
+.devops-image {
+{{ site.devopsImage }}
+}
