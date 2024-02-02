@@ -3,5 +3,8 @@ exclude:
   - "*.yml"
 # This is the only way I could find to have print images display correctly
 imageWidth: 1600px
-imageHeight: auto
+imageHeight: 900px
 coverImage:
+responsibilityModelImage: >
+  height: 2121px;
+  width: 774px;

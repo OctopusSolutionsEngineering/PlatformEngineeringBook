@@ -94,3 +94,7 @@ h2, h3 {
     margin-left: unset;
     margin-right: unset;
 }
+
+.responsibility-model-image {
+{{ site.responsibilityModelImage }};
+}
