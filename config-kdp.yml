@@ -25,3 +25,9 @@ devopsImage: |
 # https://ebooks.stackexchange.com/a/7989
 tocParent: div
 tocChild: p
+# Printed books can do some strange things with table wrapping. Table headers in
+# particular seem to be susceptible to words being broken over two lines for no
+# good reason, and none of the CSS or table tricks like width attributes or <col>
+# elements fixed it. This invisible spacing image was how I could force cells to
+# not break.
+cellSpacer: ' <img alt="Invisible spacing" src="images/pixel.png" style="width: 100px; height: 1px"/>'
