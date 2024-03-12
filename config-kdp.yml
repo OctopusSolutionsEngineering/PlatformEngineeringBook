@@ -21,6 +21,9 @@ radarChartImage: |
 devopsImage: |
   width: 1000px;
   height: 503px;
+deeasImage: |
+  width: 1200px;
+  height: 1920px;
 # The TOC for Kindle needs to be a list of paragraphs:
 # https://ebooks.stackexchange.com/a/7989
 tocParent: div

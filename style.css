@@ -123,3 +123,7 @@ h2, h3 {
 .devops-image {
 {{ site.devopsImage }}
 }
+
+.deeas-image {
+{{ site.deeasImage }}
+}
