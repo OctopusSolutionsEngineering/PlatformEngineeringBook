@@ -2,26 +2,22 @@
 
 <p>
     Perhaps the best summary of DevOps is a quote from Werner Vogels, Amazon's CTO, who said in 2006 "You build it, you
-    run it."
-    In 2006 AWS comprised 3 services: EC2, S3, and SQS, and it was possible to hold the entirety of AWS in your head.
-    Today, AWS has hundreds of services, and is just one of many cloud platforms. We've long passed the point where any
-    individual or team can be expected to hold such complexity in their heads. And yet "you build it, you run it"
-    remains synonymous with DevOps.
+    run it." In 2006 AWS comprised 3 services: EC2, S3, and SQS, and it was possible to hold the entirety of AWS in your
+    head. Today, AWS has hundreds of services, and is just one of many cloud platforms. We've long passed the point
+    where any individual or team can be expected to hold such complexity in their heads. And yet "you build it, you run
+    it" remains synonymous with DevOps.
 </p>
 
 <p>
     Meanwhile, DevOps has grown to encompass much more than simply building and running technical solutions. DevOps
     teams are responsible for meeting performance metrics defined by research organizations like DevOps Research and
-    Assessment
-    (DORA) and also implementing high performing team structures such as those defined by Westrum's organization
-    culture.
-    The concept of DevOps has proven so popular and grown to encompass such a wide range of disciplines, tools, and
-    processes
-    that it is no longer possible to define where DevOps ends.
+    Assessment (DORA) and also implementing high performing team structures such as those defined by Westrum's organization
+    culture. The concept of DevOps has proven so popular and grown to encompass such a wide range of disciplines, tools, and
+    processes that it is no longer possible to define where DevOps ends.
 </p>
 
 <p>
-    Since DevOps doesn't place any limits on what a DevOps team is responsible for, individual DevOps teams must take
+    Since DevOps doesn't place any limits on a DevOps team's responsibility, individual DevOps teams must take
     responsibility for defining a set of architectural decisions to guide the implementation of their projects and
     processes.
 </p>
@@ -63,7 +59,7 @@
 
 <p>
     One of the defining characteristics of these services is that
-    they are very clear what you are responsible for and what you are not. For example, if you are a IaaS customer,
+    they clearly define what you are responsible for and what you are not. For example, if you are a IaaS customer,
     you know that you are not responsible for purchasing hardware or racking servers. Likewise, SaaS customers know they
     are not responsible for patching the software.
 </p>
@@ -88,27 +84,81 @@
     </li>
 </ul>
 
-<div><img class="responsibility-model-image" alt="Customer responsibility diagram" src="images/customer-responsibility-model.png"/></div>
+<div><img class="responsibility-model-image" alt="Customer responsibility diagram"
+          src="images/customer-responsibility-model.png"/></div>
 
-<div><img class="responsibility-model-image" alt="Shared responsibility diagram" src="images/shared-responsibility-model.png"/></div>
+<div><img class="responsibility-model-image" alt="Shared responsibility diagram"
+          src="images/shared-responsibility-model.png"/></div>
 
-<div><img class="responsibility-model-image" alt="Central responsibility diagram" src="images/central-responsibility-model.png"/></div>
+<div><img class="responsibility-model-image" alt="Central responsibility diagram"
+          src="images/central-responsibility-model.png"/></div>
 
 <p>
-    DEaaS teams must be mindful of the constraints they face when sharing many artifacts, allowing customers to customize
-    those artifacts, and retaining the ability to update artifacts over time. These three concerns form the responsibility triad,
-    and DEaaS teams can optimize for any two concerns.
+    DEaaS teams must be mindful of the constraints they face when sharing many artifacts, allowing customers to
+    customize
+    those artifacts, and retaining the ability to update artifacts over time. These three concerns form the
+    responsibility triad, and DEaaS teams can optimize for any two concerns.
 </p>
 
 <div><img class="responsibility-triad-image" alt="Responsibility triad" src="images/optimize-for-any-two.png"/></div>
 
 <p>
-    DEaaS is offered as an internal service, and like any service, requires supporting business functions such as documentation,
+    DEaaS is offered as an internal service, and like any service, requires supporting business functions such as
+    documentation,
     support, issue tracking, monitoring, marketing, and training.
 </p>
 
 <div><img class="responsibility-triad-image" alt="DEaaS Diagram" src="images/deaas-diagram.png"/></div>
 
 <p>
+    The architectural decisions maintained by the DEaaS team can be broken down into functional and non-functional
+    requirements. Functional requires describe what a system shall do, while non-functional requirements describe
+    how a system shall be.
+</p>
 
+<p>
+    A common type of artifact for DEaaS teams are golden pipelines describing how software is built and deployed. 10
+    common non-functional requirements related to the deployment of software are:
+</p>
+
+<ul>
+    <li>Repeatable deployments</li>
+    <li>Verifiable deployments</li>
+    <li>Seamless deployments</li>
+    <li>Recoverable deployments</li>
+    <li>Visible deployments</li>
+    <li>Measurable deployments</li>
+    <li>Auditable deployments</li>
+    <li>Standardized deployments</li>
+    <li>Maintainable deployments</li>
+    <li>Coordinated deployments</li>
+</ul>
+
+<div><img class="radar-chart-image" alt="DevOps Lifecycle" src="images/radarchart.png"/></div>
+
+<p>
+    In addition to measuring the impact on DevEx, DEaaS teams can also measure:
+</p>
+
+<ul>
+    <li>Metrics valuable to the customer, such as the impact on DORA metrics</li>
+    <li>Usage metrics, such as how many deployment pipelines, cloud resources, or development environments were created
+        via the IDP
+    </li>
+    <li>North star metrics, such as the time it takes for a new employee to commit their 10th PR</li>
+</ul>
+
+<p>
+    Ultimately the value of a DEaaS team must be measured by its impact on the business. The three areas that any
+    business initiative can impact are:
+</p>
+
+<ul>
+    <li>Revenue</li>
+    <li>Risk</li>
+    <li>Cost</li>
+</ul>
+
+<p>
+    DEaaS is
 </p>
