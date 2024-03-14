@@ -127,3 +127,7 @@ h2, h3 {
 .deeas-image {
 {{ site.deeasImage }}
 }
+
+.idp-image {
+{{ site.idpImage }}
+}

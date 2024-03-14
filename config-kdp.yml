@@ -24,6 +24,9 @@ devopsImage: |
 deeasImage: |
   width: 1200px;
   height: 1920px;
+idpImage: |
+  width: 1694px;
+  height: 1127px;
 # The TOC for Kindle needs to be a list of paragraphs:
 # https://ebooks.stackexchange.com/a/7989
 tocParent: div
